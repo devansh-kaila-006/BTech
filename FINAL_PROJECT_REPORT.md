@@ -160,11 +160,14 @@ To confirm gains are not due to seed or evaluation window bias, paired statistic
 * Full experimental report: [statistical_significance_report.md](file:///C:/Users/devan/OneDrive/Desktop/BTech/ablations/statistical_significance_report.md).
 
 ### Animated Dynamic Visualizations & Trajectories
-The project provides 4 real-time animated simulation recordings demonstrating system behavior under live Alibaba trace replay:
+The project provides 7 real-time animated simulation recordings demonstrating system behavior under live Alibaba trace replay:
 1. **Predictive vs Reactive Trajectory:** [animated_scaling_simulation.gif](file:///C:/Users/devan/OneDrive/Desktop/BTech/ablations/animated_scaling_simulation.gif) — Highlights early scale-up 2.3 seconds before sudden pod arrival spikes.
 2. **Safe Action Clamping Shield:** [animated_safe_shield.gif](file:///C:/Users/devan/OneDrive/Desktop/BTech/ablations/animated_safe_shield.gif) — Demonstrates real-time override of unsafe scale-down actions during cluster saturation.
 3. **Decoupled Heterogeneous Node Pools:** [animated_hierarchical_gpu.gif](file:///C:/Users/devan/OneDrive/Desktop/BTech/ablations/animated_hierarchical_gpu.gif) — Shows independent scaling curves for 16-core CPU nodes vs 8x GPU accelerator instances.
 4. **Multi-Horizon Lookahead Waves:** [animated_multi_horizon.gif](file:///C:/Users/devan/OneDrive/Desktop/BTech/ablations/animated_multi_horizon.gif) — Visualizes multi-step forecast envelopes predicting traffic 60 seconds into the future.
+5. **Chaos Engineering & Resilience:** [animated_chaos_resilience.gif](file:///C:/Users/devan/OneDrive/Desktop/BTech/ablations/animated_chaos_resilience.gif) — Demonstrates 2-tick recovery from 50% node crash and complete absorption of 4.5x flash crowd surge.
+6. **Cumulative Financial ROI Accumulator:** [animated_pareto_roi.gif](file:///C:/Users/devan/OneDrive/Desktop/BTech/ablations/animated_pareto_roi.gif) — Real-time tracking of cumulative cloud dollar spend and SLA violation elimination.
+7. **PPO-Lagrangian Dual Multiplier Dynamics:** [animated_lagrangian_dual.gif](file:///C:/Users/devan/OneDrive/Desktop/BTech/ablations/animated_lagrangian_dual.gif) — Visualizes adaptive $\lambda$ gradient ascent automatically penalizing constraint boundary breaches.
 
 ---
 
