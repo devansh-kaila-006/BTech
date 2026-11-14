@@ -89,3 +89,4 @@ export default function MultiHorizonForecastCard({ currentPod, telemetry }) {
     </div>
   );
 }
+

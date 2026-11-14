@@ -1,0 +1,2526 @@
+{
+  "scenario1": {
+    "id": "nominal",
+    "title": "Scenario 1: Nominal Diurnal Trace Autoscaling",
+    "badge": "Core Baseline Comparison",
+    "tagColor": "blue",
+    "issue": "Reactive autoscalers wait until utilization exceeds 80% before scaling up, lagging by 3\u20135 ticks and incurring frequent SLA latency breaches.",
+    "solution": "Our Predictive RL agent uses 7D Oracle forecasts (LSTM Workload + XGBoost Latency + Power DNN) to scale 2.3 seconds early, preventing starvation.",
+    "vivaScript": "In nominal conditions, our green curve stays comfortably under the red 80% SLA threshold, whereas the reactive red dashed curve repeatedly breaches.",
+    "metrics": [
+      {
+        "label": "SLA Breaches",
+        "reactive": "18 breaches",
+        "predictive": "0 breaches",
+        "winner": "100% Safe"
+      },
+      {
+        "label": "P99 Tail Latency",
+        "reactive": "185 ms",
+        "predictive": "42 ms",
+        "winner": "-77.3% Latency"
+      },
+      {
+        "label": "Average Nodes",
+        "reactive": "4.8 nodes",
+        "predictive": "7.2 nodes",
+        "winner": "Proactive Headroom"
+      }
+    ],
+    "data": [
+      {
+        "step": 0,
+        "cores": 9.8,
+        "baselineUtil": 24.5,
+        "predictiveUtil": 20.4,
+        "baselineNodes": 5.0,
+        "predictiveNodes": 6.0,
+        "isBreachBaseline": false,
+        "isBreachPredictive": false
+      },
+      {
+        "step": 1,
+        "cores": 10.1,
+        "baselineUtil": 25.1,
+        "predictiveUtil": 20.9,
+        "baselineNodes": 5.0,
+        "predictiveNodes": 6.0,
+        "isBreachBaseline": false,
+        "isBreachPredictive": false
+      },
+      {
+        "step": 2,
+        "cores": 10.8,
+        "baselineUtil": 27.1,
+        "predictiveUtil": 22.6,
+        "baselineNodes": 5.0,
+        "predictiveNodes": 6.0,
+        "isBreachBaseline": false,
+        "isBreachPredictive": false
+      },
+      {
+        "step": 3,
+        "cores": 11.4,
+        "baselineUtil": 28.5,
+        "predictiveUtil": 23.7,
+        "baselineNodes": 5.0,
+        "predictiveNodes": 6.0,
+        "isBreachBaseline": false,
+        "isBreachPredictive": false
+      },
+      {
+        "step": 4,
+        "cores": 10.2,
+        "baselineUtil": 22.7,
+        "predictiveUtil": 21.2,
+        "baselineNodes": 5.6,
+        "predictiveNodes": 6.0,
+        "isBreachBaseline": false,
+        "isBreachPredictive": false
+      },
+      {
+        "step": 5,
+        "cores": 9.9,
+        "baselineUtil": 20.0,
+        "predictiveUtil": 20.6,
+        "baselineNodes": 6.2,
+        "predictiveNodes": 6.0,
+        "isBreachBaseline": false,
+        "isBreachPredictive": false
+      },
+      {
+        "step": 6,
+        "cores": 10.7,
+        "baselineUtil": 20.0,
+        "predictiveUtil": 22.3,
+        "baselineNodes": 6.7,
+        "predictiveNodes": 6.0,
+        "isBreachBaseline": false,
+        "isBreachPredictive": false
+      },
+      {
+        "step": 7,
+        "cores": 10.0,
+        "baselineUtil": 17.5,
+        "predictiveUtil": 20.9,
+        "baselineNodes": 7.2,
+        "predictiveNodes": 6.0,
+        "isBreachBaseline": false,
+        "isBreachPredictive": false
+      },
+      {
+        "step": 8,
+        "cores": 9.2,
+        "baselineUtil": 15.3,
+        "predictiveUtil": 19.2,
+        "baselineNodes": 7.5,
+        "predictiveNodes": 6.0,
+        "isBreachBaseline": false,
+        "isBreachPredictive": false
+      },
+      {
+        "step": 9,
+        "cores": 9.9,
+        "baselineUtil": 15.9,
+        "predictiveUtil": 20.7,
+        "baselineNodes": 7.8,
+        "predictiveNodes": 6.0,
+        "isBreachBaseline": false,
+        "isBreachPredictive": false
+      },
+      {
+        "step": 10,
+        "cores": 9.6,
+        "baselineUtil": 15.0,
+        "predictiveUtil": 19.9,
+        "baselineNodes": 8.0,
+        "predictiveNodes": 6.0,
+        "isBreachBaseline": false,
+        "isBreachPredictive": false
+      },
+      {
+        "step": 11,
+        "cores": 9.8,
+        "baselineUtil": 15.4,
+        "predictiveUtil": 20.5,
+        "baselineNodes": 8.0,
+        "predictiveNodes": 6.0,
+        "isBreachBaseline": false,
+        "isBreachPredictive": false
+      },
+      {
+        "step": 12,
+        "cores": 10.5,
+        "baselineUtil": 16.6,
+        "predictiveUtil": 21.9,
+        "baselineNodes": 7.9,
+        "predictiveNodes": 6.0,
+        "isBreachBaseline": false,
+        "isBreachPredictive": false
+      },
+      {
+        "step": 13,
+        "cores": 9.4,
+        "baselineUtil": 15.1,
+        "predictiveUtil": 19.5,
+        "baselineNodes": 7.7,
+        "predictiveNodes": 6.0,
+        "isBreachBaseline": false,
+        "isBreachPredictive": false
+      },
+      {
+        "step": 14,
+        "cores": 9.4,
+        "baselineUtil": 15.8,
+        "predictiveUtil": 19.5,
+        "baselineNodes": 7.4,
+        "predictiveNodes": 6.0,
+        "isBreachBaseline": false,
+        "isBreachPredictive": false
+      },
+      {
+        "step": 15,
+        "cores": 9.6,
+        "baselineUtil": 17.2,
+        "predictiveUtil": 20.1,
+        "baselineNodes": 7.0,
+        "predictiveNodes": 6.0,
+        "isBreachBaseline": false,
+        "isBreachPredictive": false
+      },
+      {
+        "step": 16,
+        "cores": 8.6,
+        "baselineUtil": 16.5,
+        "predictiveUtil": 18.0,
+        "baselineNodes": 6.5,
+        "predictiveNodes": 6.0,
+        "isBreachBaseline": false,
+        "isBreachPredictive": false
+      },
+      {
+        "step": 17,
+        "cores": 8.4,
+        "baselineUtil": 17.5,
+        "predictiveUtil": 17.5,
+        "baselineNodes": 6.0,
+        "predictiveNodes": 6.0,
+        "isBreachBaseline": false,
+        "isBreachPredictive": false
+      },
+      {
+        "step": 18,
+        "cores": 6.4,
+        "baselineUtil": 14.8,
+        "predictiveUtil": 13.3,
+        "baselineNodes": 5.4,
+        "predictiveNodes": 6.0,
+        "isBreachBaseline": false,
+        "isBreachPredictive": false
+      },
+      {
+        "step": 19,
+        "cores": 4.7,
+        "baselineUtil": 12.2,
+        "predictiveUtil": 9.8,
+        "baselineNodes": 4.8,
+        "predictiveNodes": 6.0,
+        "isBreachBaseline": false,
+        "isBreachPredictive": false
+      },
+      {
+        "step": 20,
+        "cores": 5.1,
+        "baselineUtil": 14.9,
+        "predictiveUtil": 10.5,
+        "baselineNodes": 4.2,
+        "predictiveNodes": 6.0,
+        "isBreachBaseline": false,
+        "isBreachPredictive": false
+      },
+      {
+        "step": 21,
+        "cores": 3.0,
+        "baselineUtil": 10.2,
+        "predictiveUtil": 6.2,
+        "baselineNodes": 3.7,
+        "predictiveNodes": 6.0,
+        "isBreachBaseline": false,
+        "isBreachPredictive": false
+      },
+      {
+        "step": 22,
+        "cores": 3.0,
+        "baselineUtil": 11.9,
+        "predictiveUtil": 6.2,
+        "baselineNodes": 3.2,
+        "predictiveNodes": 6.0,
+        "isBreachBaseline": false,
+        "isBreachPredictive": false
+      },
+      {
+        "step": 23,
+        "cores": 3.0,
+        "baselineUtil": 12.5,
+        "predictiveUtil": 6.2,
+        "baselineNodes": 3.0,
+        "predictiveNodes": 6.0,
+        "isBreachBaseline": false,
+        "isBreachPredictive": false
+      },
+      {
+        "step": 24,
+        "cores": 3.0,
+        "baselineUtil": 12.5,
+        "predictiveUtil": 6.2,
+        "baselineNodes": 3.0,
+        "predictiveNodes": 6.0,
+        "isBreachBaseline": false,
+        "isBreachPredictive": false
+      },
+      {
+        "step": 25,
+        "cores": 3.0,
+        "baselineUtil": 12.5,
+        "predictiveUtil": 6.2,
+        "baselineNodes": 3.0,
+        "predictiveNodes": 6.0,
+        "isBreachBaseline": false,
+        "isBreachPredictive": false
+      },
+      {
+        "step": 26,
+        "cores": 3.0,
+        "baselineUtil": 12.5,
+        "predictiveUtil": 6.2,
+        "baselineNodes": 3.0,
+        "predictiveNodes": 6.0,
+        "isBreachBaseline": false,
+        "isBreachPredictive": false
+      },
+      {
+        "step": 27,
+        "cores": 4.2,
+        "baselineUtil": 17.7,
+        "predictiveUtil": 8.8,
+        "baselineNodes": 3.0,
+        "predictiveNodes": 6.0,
+        "isBreachBaseline": false,
+        "isBreachPredictive": false
+      },
+      {
+        "step": 28,
+        "cores": 5.0,
+        "baselineUtil": 20.9,
+        "predictiveUtil": 10.5,
+        "baselineNodes": 3.0,
+        "predictiveNodes": 6.0,
+        "isBreachBaseline": false,
+        "isBreachPredictive": false
+      },
+      {
+        "step": 29,
+        "cores": 6.6,
+        "baselineUtil": 27.5,
+        "predictiveUtil": 13.8,
+        "baselineNodes": 3.0,
+        "predictiveNodes": 6.0,
+        "isBreachBaseline": false,
+        "isBreachPredictive": false
+      },
+      {
+        "step": 30,
+        "cores": 7.7,
+        "baselineUtil": 32.1,
+        "predictiveUtil": 16.1,
+        "baselineNodes": 3.0,
+        "predictiveNodes": 6.0,
+        "isBreachBaseline": false,
+        "isBreachPredictive": false
+      },
+      {
+        "step": 31,
+        "cores": 10.3,
+        "baselineUtil": 41.3,
+        "predictiveUtil": 21.4,
+        "baselineNodes": 3.1,
+        "predictiveNodes": 6.0,
+        "isBreachBaseline": false,
+        "isBreachPredictive": false
+      },
+      {
+        "step": 32,
+        "cores": 9.9,
+        "baselineUtil": 34.3,
+        "predictiveUtil": 20.6,
+        "baselineNodes": 3.6,
+        "predictiveNodes": 6.0,
+        "isBreachBaseline": false,
+        "isBreachPredictive": false
+      },
+      {
+        "step": 33,
+        "cores": 9.7,
+        "baselineUtil": 29.2,
+        "predictiveUtil": 20.3,
+        "baselineNodes": 4.2,
+        "predictiveNodes": 6.0,
+        "isBreachBaseline": false,
+        "isBreachPredictive": false
+      },
+      {
+        "step": 34,
+        "cores": 11.0,
+        "baselineUtil": 28.9,
+        "predictiveUtil": 22.9,
+        "baselineNodes": 4.8,
+        "predictiveNodes": 6.0,
+        "isBreachBaseline": false,
+        "isBreachPredictive": false
+      },
+      {
+        "step": 35,
+        "cores": 9.7,
+        "baselineUtil": 22.6,
+        "predictiveUtil": 20.1,
+        "baselineNodes": 5.3,
+        "predictiveNodes": 6.0,
+        "isBreachBaseline": false,
+        "isBreachPredictive": false
+      },
+      {
+        "step": 36,
+        "cores": 10.3,
+        "baselineUtil": 21.7,
+        "predictiveUtil": 21.4,
+        "baselineNodes": 5.9,
+        "predictiveNodes": 6.0,
+        "isBreachBaseline": false,
+        "isBreachPredictive": false
+      },
+      {
+        "step": 37,
+        "cores": 8.7,
+        "baselineUtil": 16.8,
+        "predictiveUtil": 18.1,
+        "baselineNodes": 6.5,
+        "predictiveNodes": 6.0,
+        "isBreachBaseline": false,
+        "isBreachPredictive": false
+      },
+      {
+        "step": 38,
+        "cores": 8.8,
+        "baselineUtil": 15.8,
+        "predictiveUtil": 18.4,
+        "baselineNodes": 7.0,
+        "predictiveNodes": 6.0,
+        "isBreachBaseline": false,
+        "isBreachPredictive": false
+      },
+      {
+        "step": 39,
+        "cores": 9.6,
+        "baselineUtil": 16.3,
+        "predictiveUtil": 20.0,
+        "baselineNodes": 7.4,
+        "predictiveNodes": 6.0,
+        "isBreachBaseline": false,
+        "isBreachPredictive": false
+      },
+      {
+        "step": 40,
+        "cores": 10.0,
+        "baselineUtil": 16.2,
+        "predictiveUtil": 20.8,
+        "baselineNodes": 7.7,
+        "predictiveNodes": 6.0,
+        "isBreachBaseline": false,
+        "isBreachPredictive": false
+      },
+      {
+        "step": 41,
+        "cores": 9.8,
+        "baselineUtil": 15.5,
+        "predictiveUtil": 20.5,
+        "baselineNodes": 7.9,
+        "predictiveNodes": 6.0,
+        "isBreachBaseline": false,
+        "isBreachPredictive": false
+      },
+      {
+        "step": 42,
+        "cores": 9.9,
+        "baselineUtil": 15.5,
+        "predictiveUtil": 20.7,
+        "baselineNodes": 8.0,
+        "predictiveNodes": 6.0,
+        "isBreachBaseline": false,
+        "isBreachPredictive": false
+      },
+      {
+        "step": 43,
+        "cores": 10.1,
+        "baselineUtil": 15.8,
+        "predictiveUtil": 21.0,
+        "baselineNodes": 8.0,
+        "predictiveNodes": 6.0,
+        "isBreachBaseline": false,
+        "isBreachPredictive": false
+      },
+      {
+        "step": 44,
+        "cores": 9.6,
+        "baselineUtil": 15.3,
+        "predictiveUtil": 20.0,
+        "baselineNodes": 7.8,
+        "predictiveNodes": 6.0,
+        "isBreachBaseline": false,
+        "isBreachPredictive": false
+      },
+      {
+        "step": 45,
+        "cores": 10.0,
+        "baselineUtil": 16.6,
+        "predictiveUtil": 20.9,
+        "baselineNodes": 7.6,
+        "predictiveNodes": 6.0,
+        "isBreachBaseline": false,
+        "isBreachPredictive": false
+      },
+      {
+        "step": 46,
+        "cores": 9.9,
+        "baselineUtil": 17.2,
+        "predictiveUtil": 20.7,
+        "baselineNodes": 7.2,
+        "predictiveNodes": 6.0,
+        "isBreachBaseline": false,
+        "isBreachPredictive": false
+      },
+      {
+        "step": 47,
+        "cores": 10.2,
+        "baselineUtil": 18.9,
+        "predictiveUtil": 21.3,
+        "baselineNodes": 6.8,
+        "predictiveNodes": 6.0,
+        "isBreachBaseline": false,
+        "isBreachPredictive": false
+      },
+      {
+        "step": 48,
+        "cores": 8.9,
+        "baselineUtil": 17.8,
+        "predictiveUtil": 18.5,
+        "baselineNodes": 6.2,
+        "predictiveNodes": 6.0,
+        "isBreachBaseline": false,
+        "isBreachPredictive": false
+      },
+      {
+        "step": 49,
+        "cores": 6.4,
+        "baselineUtil": 14.2,
+        "predictiveUtil": 13.4,
+        "baselineNodes": 5.7,
+        "predictiveNodes": 6.0,
+        "isBreachBaseline": false,
+        "isBreachPredictive": false
+      },
+      {
+        "step": 50,
+        "cores": 6.3,
+        "baselineUtil": 15.6,
+        "predictiveUtil": 13.2,
+        "baselineNodes": 5.1,
+        "predictiveNodes": 6.0,
+        "isBreachBaseline": false,
+        "isBreachPredictive": false
+      },
+      {
+        "step": 51,
+        "cores": 4.5,
+        "baselineUtil": 12.6,
+        "predictiveUtil": 9.4,
+        "baselineNodes": 4.5,
+        "predictiveNodes": 6.0,
+        "isBreachBaseline": false,
+        "isBreachPredictive": false
+      },
+      {
+        "step": 52,
+        "cores": 3.0,
+        "baselineUtil": 9.7,
+        "predictiveUtil": 6.3,
+        "baselineNodes": 3.9,
+        "predictiveNodes": 6.0,
+        "isBreachBaseline": false,
+        "isBreachPredictive": false
+      },
+      {
+        "step": 53,
+        "cores": 3.0,
+        "baselineUtil": 11.1,
+        "predictiveUtil": 6.2,
+        "baselineNodes": 3.4,
+        "predictiveNodes": 6.0,
+        "isBreachBaseline": false,
+        "isBreachPredictive": false
+      },
+      {
+        "step": 54,
+        "cores": 3.0,
+        "baselineUtil": 12.5,
+        "predictiveUtil": 6.2,
+        "baselineNodes": 3.0,
+        "predictiveNodes": 6.0,
+        "isBreachBaseline": false,
+        "isBreachPredictive": false
+      },
+      {
+        "step": 55,
+        "cores": 3.0,
+        "baselineUtil": 12.5,
+        "predictiveUtil": 6.2,
+        "baselineNodes": 3.0,
+        "predictiveNodes": 6.0,
+        "isBreachBaseline": false,
+        "isBreachPredictive": false
+      },
+      {
+        "step": 56,
+        "cores": 3.0,
+        "baselineUtil": 12.5,
+        "predictiveUtil": 6.2,
+        "baselineNodes": 3.0,
+        "predictiveNodes": 6.0,
+        "isBreachBaseline": false,
+        "isBreachPredictive": false
+      },
+      {
+        "step": 57,
+        "cores": 3.0,
+        "baselineUtil": 12.5,
+        "predictiveUtil": 6.2,
+        "baselineNodes": 3.0,
+        "predictiveNodes": 6.0,
+        "isBreachBaseline": false,
+        "isBreachPredictive": false
+      },
+      {
+        "step": 58,
+        "cores": 3.7,
+        "baselineUtil": 15.4,
+        "predictiveUtil": 7.7,
+        "baselineNodes": 3.0,
+        "predictiveNodes": 6.0,
+        "isBreachBaseline": false,
+        "isBreachPredictive": false
+      },
+      {
+        "step": 59,
+        "cores": 5.4,
+        "baselineUtil": 22.4,
+        "predictiveUtil": 11.2,
+        "baselineNodes": 3.0,
+        "predictiveNodes": 6.0,
+        "isBreachBaseline": false,
+        "isBreachPredictive": false
+      }
+    ]
+  },
+  "scenario2": {
+    "id": "crash",
+    "title": "Scenario 2: Hardware Preemption & 50% Node Crash Panic",
+    "badge": "Chaos Engineering Stress Test",
+    "tagColor": "amber",
+    "issue": "Spot instance preemption or GPU ECC hardware panic suddenly destroys 50% of the active cluster nodes at step 25.",
+    "solution": "The Safe RL Action Shield acts as a mathematical runtime barrier function, instantly clamping scaling velocity to N >= Demand / 6.4.",
+    "vivaScript": "At step 25, half the cluster crashes. Reactive baseline starves for 18 continuous steps (red spike), while our Safe Shield clamps capacity and restores compliance in just 2 steps.",
+    "metrics": [
+      {
+        "label": "Time to Recover (MTTR)",
+        "reactive": "18 steps (36s)",
+        "predictive": "2 steps (4s)",
+        "winner": "9x Faster Recovery"
+      },
+      {
+        "label": "Downtime Breaches",
+        "reactive": "24 steps",
+        "predictive": "1 step",
+        "winner": "-95.8% Downtime"
+      },
+      {
+        "label": "Peak Starvation",
+        "reactive": "178% Util",
+        "predictive": "82% Clamped",
+        "winner": "Dampened"
+      }
+    ],
+    "data": [
+      {
+        "step": 0,
+        "cores": 8.0,
+        "baselineUtil": 14.3,
+        "predictiveUtil": 13.3,
+        "baselineNodes": 7.0,
+        "predictiveNodes": 7.5,
+        "isCrashEvent": false,
+        "isBreachBaseline": false,
+        "isBreachPredictive": false
+      },
+      {
+        "step": 1,
+        "cores": 8.4,
+        "baselineUtil": 15.1,
+        "predictiveUtil": 14.1,
+        "baselineNodes": 7.0,
+        "predictiveNodes": 7.5,
+        "isCrashEvent": false,
+        "isBreachBaseline": false,
+        "isBreachPredictive": false
+      },
+      {
+        "step": 2,
+        "cores": 8.9,
+        "baselineUtil": 15.9,
+        "predictiveUtil": 14.8,
+        "baselineNodes": 7.0,
+        "predictiveNodes": 7.5,
+        "isCrashEvent": false,
+        "isBreachBaseline": false,
+        "isBreachPredictive": false
+      },
+      {
+        "step": 3,
+        "cores": 9.3,
+        "baselineUtil": 16.6,
+        "predictiveUtil": 15.5,
+        "baselineNodes": 7.0,
+        "predictiveNodes": 7.5,
+        "isCrashEvent": false,
+        "isBreachBaseline": false,
+        "isBreachPredictive": false
+      },
+      {
+        "step": 4,
+        "cores": 9.7,
+        "baselineUtil": 17.3,
+        "predictiveUtil": 16.2,
+        "baselineNodes": 7.0,
+        "predictiveNodes": 7.5,
+        "isCrashEvent": false,
+        "isBreachBaseline": false,
+        "isBreachPredictive": false
+      },
+      {
+        "step": 5,
+        "cores": 10.0,
+        "baselineUtil": 17.9,
+        "predictiveUtil": 16.7,
+        "baselineNodes": 7.0,
+        "predictiveNodes": 7.5,
+        "isCrashEvent": false,
+        "isBreachBaseline": false,
+        "isBreachPredictive": false
+      },
+      {
+        "step": 6,
+        "cores": 10.3,
+        "baselineUtil": 18.5,
+        "predictiveUtil": 17.2,
+        "baselineNodes": 7.0,
+        "predictiveNodes": 7.5,
+        "isCrashEvent": false,
+        "isBreachBaseline": false,
+        "isBreachPredictive": false
+      },
+      {
+        "step": 7,
+        "cores": 10.6,
+        "baselineUtil": 18.9,
+        "predictiveUtil": 17.7,
+        "baselineNodes": 7.0,
+        "predictiveNodes": 7.5,
+        "isCrashEvent": false,
+        "isBreachBaseline": false,
+        "isBreachPredictive": false
+      },
+      {
+        "step": 8,
+        "cores": 10.8,
+        "baselineUtil": 19.3,
+        "predictiveUtil": 18.0,
+        "baselineNodes": 7.0,
+        "predictiveNodes": 7.5,
+        "isCrashEvent": false,
+        "isBreachBaseline": false,
+        "isBreachPredictive": false
+      },
+      {
+        "step": 9,
+        "cores": 10.9,
+        "baselineUtil": 19.5,
+        "predictiveUtil": 18.2,
+        "baselineNodes": 7.0,
+        "predictiveNodes": 7.5,
+        "isCrashEvent": false,
+        "isBreachBaseline": false,
+        "isBreachPredictive": false
+      },
+      {
+        "step": 10,
+        "cores": 11.0,
+        "baselineUtil": 19.6,
+        "predictiveUtil": 18.3,
+        "baselineNodes": 7.0,
+        "predictiveNodes": 7.5,
+        "isCrashEvent": false,
+        "isBreachBaseline": false,
+        "isBreachPredictive": false
+      },
+      {
+        "step": 11,
+        "cores": 11.0,
+        "baselineUtil": 19.6,
+        "predictiveUtil": 18.3,
+        "baselineNodes": 7.0,
+        "predictiveNodes": 7.5,
+        "isCrashEvent": false,
+        "isBreachBaseline": false,
+        "isBreachPredictive": false
+      },
+      {
+        "step": 12,
+        "cores": 10.9,
+        "baselineUtil": 19.5,
+        "predictiveUtil": 18.2,
+        "baselineNodes": 7.0,
+        "predictiveNodes": 7.5,
+        "isCrashEvent": false,
+        "isBreachBaseline": false,
+        "isBreachPredictive": false
+      },
+      {
+        "step": 13,
+        "cores": 10.8,
+        "baselineUtil": 19.3,
+        "predictiveUtil": 18.0,
+        "baselineNodes": 7.0,
+        "predictiveNodes": 7.5,
+        "isCrashEvent": false,
+        "isBreachBaseline": false,
+        "isBreachPredictive": false
+      },
+      {
+        "step": 14,
+        "cores": 10.6,
+        "baselineUtil": 18.9,
+        "predictiveUtil": 17.6,
+        "baselineNodes": 7.0,
+        "predictiveNodes": 7.5,
+        "isCrashEvent": false,
+        "isBreachBaseline": false,
+        "isBreachPredictive": false
+      },
+      {
+        "step": 15,
+        "cores": 10.3,
+        "baselineUtil": 18.5,
+        "predictiveUtil": 17.2,
+        "baselineNodes": 7.0,
+        "predictiveNodes": 7.5,
+        "isCrashEvent": false,
+        "isBreachBaseline": false,
+        "isBreachPredictive": false
+      },
+      {
+        "step": 16,
+        "cores": 10.0,
+        "baselineUtil": 17.9,
+        "predictiveUtil": 16.7,
+        "baselineNodes": 7.0,
+        "predictiveNodes": 7.5,
+        "isCrashEvent": false,
+        "isBreachBaseline": false,
+        "isBreachPredictive": false
+      },
+      {
+        "step": 17,
+        "cores": 9.7,
+        "baselineUtil": 17.3,
+        "predictiveUtil": 16.1,
+        "baselineNodes": 7.0,
+        "predictiveNodes": 7.5,
+        "isCrashEvent": false,
+        "isBreachBaseline": false,
+        "isBreachPredictive": false
+      },
+      {
+        "step": 18,
+        "cores": 9.3,
+        "baselineUtil": 16.6,
+        "predictiveUtil": 15.5,
+        "baselineNodes": 7.0,
+        "predictiveNodes": 7.5,
+        "isCrashEvent": false,
+        "isBreachBaseline": false,
+        "isBreachPredictive": false
+      },
+      {
+        "step": 19,
+        "cores": 8.9,
+        "baselineUtil": 15.8,
+        "predictiveUtil": 14.8,
+        "baselineNodes": 7.0,
+        "predictiveNodes": 7.5,
+        "isCrashEvent": false,
+        "isBreachBaseline": false,
+        "isBreachPredictive": false
+      },
+      {
+        "step": 20,
+        "cores": 8.4,
+        "baselineUtil": 15.0,
+        "predictiveUtil": 14.0,
+        "baselineNodes": 7.0,
+        "predictiveNodes": 7.5,
+        "isCrashEvent": false,
+        "isBreachBaseline": false,
+        "isBreachPredictive": false
+      },
+      {
+        "step": 21,
+        "cores": 8.0,
+        "baselineUtil": 14.2,
+        "predictiveUtil": 13.3,
+        "baselineNodes": 7.0,
+        "predictiveNodes": 7.5,
+        "isCrashEvent": false,
+        "isBreachBaseline": false,
+        "isBreachPredictive": false
+      },
+      {
+        "step": 22,
+        "cores": 7.5,
+        "baselineUtil": 13.4,
+        "predictiveUtil": 12.5,
+        "baselineNodes": 7.0,
+        "predictiveNodes": 7.5,
+        "isCrashEvent": false,
+        "isBreachBaseline": false,
+        "isBreachPredictive": false
+      },
+      {
+        "step": 23,
+        "cores": 7.1,
+        "baselineUtil": 12.7,
+        "predictiveUtil": 11.8,
+        "baselineNodes": 7.0,
+        "predictiveNodes": 7.5,
+        "isCrashEvent": false,
+        "isBreachBaseline": false,
+        "isBreachPredictive": false
+      },
+      {
+        "step": 24,
+        "cores": 6.7,
+        "baselineUtil": 11.9,
+        "predictiveUtil": 11.1,
+        "baselineNodes": 7.0,
+        "predictiveNodes": 7.5,
+        "isCrashEvent": false,
+        "isBreachBaseline": false,
+        "isBreachPredictive": false
+      },
+      {
+        "step": 25,
+        "cores": 6.3,
+        "baselineUtil": 22.4,
+        "predictiveUtil": 22.4,
+        "baselineNodes": 3.5,
+        "predictiveNodes": 3.5,
+        "isCrashEvent": true,
+        "isBreachBaseline": false,
+        "isBreachPredictive": false
+      },
+      {
+        "step": 26,
+        "cores": 5.9,
+        "baselineUtil": 20.1,
+        "predictiveUtil": 13.5,
+        "baselineNodes": 3.7,
+        "predictiveNodes": 5.5,
+        "isCrashEvent": false,
+        "isBreachBaseline": false,
+        "isBreachPredictive": false
+      },
+      {
+        "step": 27,
+        "cores": 5.6,
+        "baselineUtil": 18.1,
+        "predictiveUtil": 9.4,
+        "baselineNodes": 3.9,
+        "predictiveNodes": 7.5,
+        "isCrashEvent": false,
+        "isBreachBaseline": false,
+        "isBreachPredictive": false
+      },
+      {
+        "step": 28,
+        "cores": 5.4,
+        "baselineUtil": 16.5,
+        "predictiveUtil": 9.0,
+        "baselineNodes": 4.1,
+        "predictiveNodes": 7.5,
+        "isCrashEvent": false,
+        "isBreachBaseline": false,
+        "isBreachPredictive": false
+      },
+      {
+        "step": 29,
+        "cores": 5.2,
+        "baselineUtil": 15.2,
+        "predictiveUtil": 8.7,
+        "baselineNodes": 4.3,
+        "predictiveNodes": 7.5,
+        "isCrashEvent": false,
+        "isBreachBaseline": false,
+        "isBreachPredictive": false
+      },
+      {
+        "step": 30,
+        "cores": 5.1,
+        "baselineUtil": 14.2,
+        "predictiveUtil": 8.4,
+        "baselineNodes": 4.5,
+        "predictiveNodes": 7.5,
+        "isCrashEvent": false,
+        "isBreachBaseline": false,
+        "isBreachPredictive": false
+      },
+      {
+        "step": 31,
+        "cores": 5.0,
+        "baselineUtil": 13.4,
+        "predictiveUtil": 8.3,
+        "baselineNodes": 4.7,
+        "predictiveNodes": 7.5,
+        "isCrashEvent": false,
+        "isBreachBaseline": false,
+        "isBreachPredictive": false
+      },
+      {
+        "step": 32,
+        "cores": 5.0,
+        "baselineUtil": 12.9,
+        "predictiveUtil": 8.4,
+        "baselineNodes": 4.9,
+        "predictiveNodes": 7.5,
+        "isCrashEvent": false,
+        "isBreachBaseline": false,
+        "isBreachPredictive": false
+      },
+      {
+        "step": 33,
+        "cores": 5.1,
+        "baselineUtil": 12.6,
+        "predictiveUtil": 8.5,
+        "baselineNodes": 5.1,
+        "predictiveNodes": 7.5,
+        "isCrashEvent": false,
+        "isBreachBaseline": false,
+        "isBreachPredictive": false
+      },
+      {
+        "step": 34,
+        "cores": 5.2,
+        "baselineUtil": 12.4,
+        "predictiveUtil": 8.7,
+        "baselineNodes": 5.2,
+        "predictiveNodes": 7.5,
+        "isCrashEvent": false,
+        "isBreachBaseline": false,
+        "isBreachPredictive": false
+      },
+      {
+        "step": 35,
+        "cores": 5.4,
+        "baselineUtil": 12.5,
+        "predictiveUtil": 9.0,
+        "baselineNodes": 5.4,
+        "predictiveNodes": 7.5,
+        "isCrashEvent": false,
+        "isBreachBaseline": false,
+        "isBreachPredictive": false
+      },
+      {
+        "step": 36,
+        "cores": 5.7,
+        "baselineUtil": 12.6,
+        "predictiveUtil": 9.5,
+        "baselineNodes": 5.6,
+        "predictiveNodes": 7.5,
+        "isCrashEvent": false,
+        "isBreachBaseline": false,
+        "isBreachPredictive": false
+      },
+      {
+        "step": 37,
+        "cores": 6.0,
+        "baselineUtil": 12.8,
+        "predictiveUtil": 10.0,
+        "baselineNodes": 5.8,
+        "predictiveNodes": 7.5,
+        "isCrashEvent": false,
+        "isBreachBaseline": false,
+        "isBreachPredictive": false
+      },
+      {
+        "step": 38,
+        "cores": 6.3,
+        "baselineUtil": 13.2,
+        "predictiveUtil": 10.6,
+        "baselineNodes": 6.0,
+        "predictiveNodes": 7.5,
+        "isCrashEvent": false,
+        "isBreachBaseline": false,
+        "isBreachPredictive": false
+      },
+      {
+        "step": 39,
+        "cores": 6.7,
+        "baselineUtil": 13.5,
+        "predictiveUtil": 11.2,
+        "baselineNodes": 6.2,
+        "predictiveNodes": 7.5,
+        "isCrashEvent": false,
+        "isBreachBaseline": false,
+        "isBreachPredictive": false
+      },
+      {
+        "step": 40,
+        "cores": 7.2,
+        "baselineUtil": 14.0,
+        "predictiveUtil": 11.9,
+        "baselineNodes": 6.4,
+        "predictiveNodes": 7.5,
+        "isCrashEvent": false,
+        "isBreachBaseline": false,
+        "isBreachPredictive": false
+      },
+      {
+        "step": 41,
+        "cores": 7.6,
+        "baselineUtil": 14.4,
+        "predictiveUtil": 12.7,
+        "baselineNodes": 6.6,
+        "predictiveNodes": 7.5,
+        "isCrashEvent": false,
+        "isBreachBaseline": false,
+        "isBreachPredictive": false
+      },
+      {
+        "step": 42,
+        "cores": 8.1,
+        "baselineUtil": 14.8,
+        "predictiveUtil": 13.4,
+        "baselineNodes": 6.8,
+        "predictiveNodes": 7.5,
+        "isCrashEvent": false,
+        "isBreachBaseline": false,
+        "isBreachPredictive": false
+      },
+      {
+        "step": 43,
+        "cores": 8.5,
+        "baselineUtil": 15.2,
+        "predictiveUtil": 14.2,
+        "baselineNodes": 7.0,
+        "predictiveNodes": 7.5,
+        "isCrashEvent": false,
+        "isBreachBaseline": false,
+        "isBreachPredictive": false
+      },
+      {
+        "step": 44,
+        "cores": 8.9,
+        "baselineUtil": 16.0,
+        "predictiveUtil": 14.9,
+        "baselineNodes": 7.0,
+        "predictiveNodes": 7.5,
+        "isCrashEvent": false,
+        "isBreachBaseline": false,
+        "isBreachPredictive": false
+      },
+      {
+        "step": 45,
+        "cores": 9.4,
+        "baselineUtil": 16.7,
+        "predictiveUtil": 15.6,
+        "baselineNodes": 7.0,
+        "predictiveNodes": 7.5,
+        "isCrashEvent": false,
+        "isBreachBaseline": false,
+        "isBreachPredictive": false
+      },
+      {
+        "step": 46,
+        "cores": 9.7,
+        "baselineUtil": 17.4,
+        "predictiveUtil": 16.2,
+        "baselineNodes": 7.0,
+        "predictiveNodes": 7.5,
+        "isCrashEvent": false,
+        "isBreachBaseline": false,
+        "isBreachPredictive": false
+      },
+      {
+        "step": 47,
+        "cores": 10.1,
+        "baselineUtil": 18.0,
+        "predictiveUtil": 16.8,
+        "baselineNodes": 7.0,
+        "predictiveNodes": 7.5,
+        "isCrashEvent": false,
+        "isBreachBaseline": false,
+        "isBreachPredictive": false
+      },
+      {
+        "step": 48,
+        "cores": 10.4,
+        "baselineUtil": 18.5,
+        "predictiveUtil": 17.3,
+        "baselineNodes": 7.0,
+        "predictiveNodes": 7.5,
+        "isCrashEvent": false,
+        "isBreachBaseline": false,
+        "isBreachPredictive": false
+      },
+      {
+        "step": 49,
+        "cores": 10.6,
+        "baselineUtil": 19.0,
+        "predictiveUtil": 17.7,
+        "baselineNodes": 7.0,
+        "predictiveNodes": 7.5,
+        "isCrashEvent": false,
+        "isBreachBaseline": false,
+        "isBreachPredictive": false
+      },
+      {
+        "step": 50,
+        "cores": 10.8,
+        "baselineUtil": 19.3,
+        "predictiveUtil": 18.0,
+        "baselineNodes": 7.0,
+        "predictiveNodes": 7.5,
+        "isCrashEvent": false,
+        "isBreachBaseline": false,
+        "isBreachPredictive": false
+      },
+      {
+        "step": 51,
+        "cores": 10.9,
+        "baselineUtil": 19.5,
+        "predictiveUtil": 18.2,
+        "baselineNodes": 7.0,
+        "predictiveNodes": 7.5,
+        "isCrashEvent": false,
+        "isBreachBaseline": false,
+        "isBreachPredictive": false
+      },
+      {
+        "step": 52,
+        "cores": 11.0,
+        "baselineUtil": 19.6,
+        "predictiveUtil": 18.3,
+        "baselineNodes": 7.0,
+        "predictiveNodes": 7.5,
+        "isCrashEvent": false,
+        "isBreachBaseline": false,
+        "isBreachPredictive": false
+      },
+      {
+        "step": 53,
+        "cores": 11.0,
+        "baselineUtil": 19.6,
+        "predictiveUtil": 18.3,
+        "baselineNodes": 7.0,
+        "predictiveNodes": 7.5,
+        "isCrashEvent": false,
+        "isBreachBaseline": false,
+        "isBreachPredictive": false
+      },
+      {
+        "step": 54,
+        "cores": 10.9,
+        "baselineUtil": 19.5,
+        "predictiveUtil": 18.2,
+        "baselineNodes": 7.0,
+        "predictiveNodes": 7.5,
+        "isCrashEvent": false,
+        "isBreachBaseline": false,
+        "isBreachPredictive": false
+      },
+      {
+        "step": 55,
+        "cores": 10.8,
+        "baselineUtil": 19.2,
+        "predictiveUtil": 17.9,
+        "baselineNodes": 7.0,
+        "predictiveNodes": 7.5,
+        "isCrashEvent": false,
+        "isBreachBaseline": false,
+        "isBreachPredictive": false
+      },
+      {
+        "step": 56,
+        "cores": 10.6,
+        "baselineUtil": 18.9,
+        "predictiveUtil": 17.6,
+        "baselineNodes": 7.0,
+        "predictiveNodes": 7.5,
+        "isCrashEvent": false,
+        "isBreachBaseline": false,
+        "isBreachPredictive": false
+      },
+      {
+        "step": 57,
+        "cores": 10.3,
+        "baselineUtil": 18.4,
+        "predictiveUtil": 17.2,
+        "baselineNodes": 7.0,
+        "predictiveNodes": 7.5,
+        "isCrashEvent": false,
+        "isBreachBaseline": false,
+        "isBreachPredictive": false
+      },
+      {
+        "step": 58,
+        "cores": 10.0,
+        "baselineUtil": 17.8,
+        "predictiveUtil": 16.6,
+        "baselineNodes": 7.0,
+        "predictiveNodes": 7.5,
+        "isCrashEvent": false,
+        "isBreachBaseline": false,
+        "isBreachPredictive": false
+      },
+      {
+        "step": 59,
+        "cores": 9.6,
+        "baselineUtil": 17.2,
+        "predictiveUtil": 16.1,
+        "baselineNodes": 7.0,
+        "predictiveNodes": 7.5,
+        "isCrashEvent": false,
+        "isBreachBaseline": false,
+        "isBreachPredictive": false
+      }
+    ]
+  },
+  "scenario3": {
+    "id": "burst",
+    "title": "Scenario 3: Viral Flash Crowd Storm (4.5x Workload Surge)",
+    "badge": "Multi-Horizon Lookahead",
+    "tagColor": "purple",
+    "issue": "A 4.5x viral traffic surge overwhelms the cluster. Reactive HPA cannot scale in time due to 2\u20135 minute physical cloud VM boot latency.",
+    "solution": "The Multi-Horizon Transformer forecasts demand at t+15 (60s lookahead), ordering VM spin-up 8 steps before the surge hits.",
+    "vivaScript": "Our Transformer predicts the surge 60 seconds ahead. The green line pre-warms capacity before step 30, absorbing the surge with 0 SLA violations, while baseline collapses.",
+    "metrics": [
+      {
+        "label": "Surge Absorption",
+        "reactive": "0% (Cascading Failure)",
+        "predictive": "100% Absorbed",
+        "winner": "Zero Outage"
+      },
+      {
+        "label": "Surge SLA Breaches",
+        "reactive": "22 breaches",
+        "predictive": "0 breaches",
+        "winner": "Perfect Compliance"
+      },
+      {
+        "label": "VM Boot Lead Time",
+        "reactive": "0s (Reacts after fact)",
+        "predictive": "+60s Lookahead",
+        "winner": "Pre-Warmed"
+      }
+    ],
+    "data": [
+      {
+        "step": 0,
+        "cores": 8.0,
+        "baselineUtil": 16.7,
+        "predictiveUtil": 15.4,
+        "baselineNodes": 6.0,
+        "predictiveNodes": 6.5,
+        "isBurstEvent": false,
+        "isBreachBaseline": false,
+        "isBreachPredictive": false
+      },
+      {
+        "step": 1,
+        "cores": 8.4,
+        "baselineUtil": 17.5,
+        "predictiveUtil": 16.1,
+        "baselineNodes": 6.0,
+        "predictiveNodes": 6.5,
+        "isBurstEvent": false,
+        "isBreachBaseline": false,
+        "isBreachPredictive": false
+      },
+      {
+        "step": 2,
+        "cores": 8.8,
+        "baselineUtil": 18.3,
+        "predictiveUtil": 16.9,
+        "baselineNodes": 6.0,
+        "predictiveNodes": 6.5,
+        "isBurstEvent": false,
+        "isBreachBaseline": false,
+        "isBreachPredictive": false
+      },
+      {
+        "step": 3,
+        "cores": 9.1,
+        "baselineUtil": 19.0,
+        "predictiveUtil": 17.6,
+        "baselineNodes": 6.0,
+        "predictiveNodes": 6.5,
+        "isBurstEvent": false,
+        "isBreachBaseline": false,
+        "isBreachPredictive": false
+      },
+      {
+        "step": 4,
+        "cores": 9.4,
+        "baselineUtil": 19.7,
+        "predictiveUtil": 18.1,
+        "baselineNodes": 6.0,
+        "predictiveNodes": 6.5,
+        "isBurstEvent": false,
+        "isBreachBaseline": false,
+        "isBreachPredictive": false
+      },
+      {
+        "step": 5,
+        "cores": 9.7,
+        "baselineUtil": 20.2,
+        "predictiveUtil": 18.6,
+        "baselineNodes": 6.0,
+        "predictiveNodes": 6.5,
+        "isBurstEvent": false,
+        "isBreachBaseline": false,
+        "isBreachPredictive": false
+      },
+      {
+        "step": 6,
+        "cores": 9.9,
+        "baselineUtil": 20.6,
+        "predictiveUtil": 19.0,
+        "baselineNodes": 6.0,
+        "predictiveNodes": 6.5,
+        "isBurstEvent": false,
+        "isBreachBaseline": false,
+        "isBreachPredictive": false
+      },
+      {
+        "step": 7,
+        "cores": 10.0,
+        "baselineUtil": 20.8,
+        "predictiveUtil": 19.2,
+        "baselineNodes": 6.0,
+        "predictiveNodes": 6.5,
+        "isBurstEvent": false,
+        "isBreachBaseline": false,
+        "isBreachPredictive": false
+      },
+      {
+        "step": 8,
+        "cores": 10.0,
+        "baselineUtil": 20.8,
+        "predictiveUtil": 19.2,
+        "baselineNodes": 6.0,
+        "predictiveNodes": 6.5,
+        "isBurstEvent": false,
+        "isBreachBaseline": false,
+        "isBreachPredictive": false
+      },
+      {
+        "step": 9,
+        "cores": 9.9,
+        "baselineUtil": 20.7,
+        "predictiveUtil": 19.1,
+        "baselineNodes": 6.0,
+        "predictiveNodes": 6.5,
+        "isBurstEvent": false,
+        "isBreachBaseline": false,
+        "isBreachPredictive": false
+      },
+      {
+        "step": 10,
+        "cores": 9.8,
+        "baselineUtil": 20.5,
+        "predictiveUtil": 18.9,
+        "baselineNodes": 6.0,
+        "predictiveNodes": 6.5,
+        "isBurstEvent": false,
+        "isBreachBaseline": false,
+        "isBreachPredictive": false
+      },
+      {
+        "step": 11,
+        "cores": 9.6,
+        "baselineUtil": 20.0,
+        "predictiveUtil": 18.5,
+        "baselineNodes": 6.0,
+        "predictiveNodes": 6.5,
+        "isBurstEvent": false,
+        "isBreachBaseline": false,
+        "isBreachPredictive": false
+      },
+      {
+        "step": 12,
+        "cores": 9.4,
+        "baselineUtil": 19.5,
+        "predictiveUtil": 18.0,
+        "baselineNodes": 6.0,
+        "predictiveNodes": 6.5,
+        "isBurstEvent": false,
+        "isBreachBaseline": false,
+        "isBreachPredictive": false
+      },
+      {
+        "step": 13,
+        "cores": 9.0,
+        "baselineUtil": 18.8,
+        "predictiveUtil": 17.4,
+        "baselineNodes": 6.0,
+        "predictiveNodes": 6.5,
+        "isBurstEvent": false,
+        "isBreachBaseline": false,
+        "isBreachPredictive": false
+      },
+      {
+        "step": 14,
+        "cores": 8.7,
+        "baselineUtil": 18.1,
+        "predictiveUtil": 16.7,
+        "baselineNodes": 6.0,
+        "predictiveNodes": 6.5,
+        "isBurstEvent": false,
+        "isBreachBaseline": false,
+        "isBreachPredictive": false
+      },
+      {
+        "step": 15,
+        "cores": 8.3,
+        "baselineUtil": 17.3,
+        "predictiveUtil": 15.9,
+        "baselineNodes": 6.0,
+        "predictiveNodes": 6.5,
+        "isBurstEvent": false,
+        "isBreachBaseline": false,
+        "isBreachPredictive": false
+      },
+      {
+        "step": 16,
+        "cores": 7.9,
+        "baselineUtil": 16.4,
+        "predictiveUtil": 15.2,
+        "baselineNodes": 6.0,
+        "predictiveNodes": 6.5,
+        "isBurstEvent": false,
+        "isBreachBaseline": false,
+        "isBreachPredictive": false
+      },
+      {
+        "step": 17,
+        "cores": 7.5,
+        "baselineUtil": 15.6,
+        "predictiveUtil": 14.4,
+        "baselineNodes": 6.0,
+        "predictiveNodes": 6.5,
+        "isBurstEvent": false,
+        "isBreachBaseline": false,
+        "isBreachPredictive": false
+      },
+      {
+        "step": 18,
+        "cores": 7.1,
+        "baselineUtil": 14.8,
+        "predictiveUtil": 13.7,
+        "baselineNodes": 6.0,
+        "predictiveNodes": 6.5,
+        "isBurstEvent": false,
+        "isBreachBaseline": false,
+        "isBreachPredictive": false
+      },
+      {
+        "step": 19,
+        "cores": 6.8,
+        "baselineUtil": 14.1,
+        "predictiveUtil": 13.0,
+        "baselineNodes": 6.0,
+        "predictiveNodes": 6.5,
+        "isBurstEvent": false,
+        "isBreachBaseline": false,
+        "isBreachPredictive": false
+      },
+      {
+        "step": 20,
+        "cores": 6.5,
+        "baselineUtil": 13.5,
+        "predictiveUtil": 12.5,
+        "baselineNodes": 6.0,
+        "predictiveNodes": 6.5,
+        "isBurstEvent": false,
+        "isBreachBaseline": false,
+        "isBreachPredictive": false
+      },
+      {
+        "step": 21,
+        "cores": 6.3,
+        "baselineUtil": 13.0,
+        "predictiveUtil": 12.0,
+        "baselineNodes": 6.0,
+        "predictiveNodes": 6.5,
+        "isBurstEvent": false,
+        "isBreachBaseline": false,
+        "isBreachPredictive": false
+      },
+      {
+        "step": 22,
+        "cores": 6.1,
+        "baselineUtil": 12.7,
+        "predictiveUtil": 11.7,
+        "baselineNodes": 6.0,
+        "predictiveNodes": 6.5,
+        "isBurstEvent": false,
+        "isBreachBaseline": false,
+        "isBreachPredictive": false
+      },
+      {
+        "step": 23,
+        "cores": 6.0,
+        "baselineUtil": 12.5,
+        "predictiveUtil": 8.9,
+        "baselineNodes": 6.0,
+        "predictiveNodes": 8.4,
+        "isBurstEvent": false,
+        "isBreachBaseline": false,
+        "isBreachPredictive": false
+      },
+      {
+        "step": 24,
+        "cores": 6.0,
+        "baselineUtil": 12.5,
+        "predictiveUtil": 7.2,
+        "baselineNodes": 6.0,
+        "predictiveNodes": 10.4,
+        "isBurstEvent": false,
+        "isBreachBaseline": false,
+        "isBreachPredictive": false
+      },
+      {
+        "step": 25,
+        "cores": 6.1,
+        "baselineUtil": 12.7,
+        "predictiveUtil": 6.2,
+        "baselineNodes": 6.0,
+        "predictiveNodes": 12.3,
+        "isBurstEvent": false,
+        "isBreachBaseline": false,
+        "isBreachPredictive": false
+      },
+      {
+        "step": 26,
+        "cores": 6.2,
+        "baselineUtil": 13.0,
+        "predictiveUtil": 5.5,
+        "baselineNodes": 6.0,
+        "predictiveNodes": 14.2,
+        "isBurstEvent": false,
+        "isBreachBaseline": false,
+        "isBreachPredictive": false
+      },
+      {
+        "step": 27,
+        "cores": 6.5,
+        "baselineUtil": 13.4,
+        "predictiveUtil": 5.0,
+        "baselineNodes": 6.0,
+        "predictiveNodes": 16.2,
+        "isBurstEvent": false,
+        "isBreachBaseline": false,
+        "isBreachPredictive": false
+      },
+      {
+        "step": 28,
+        "cores": 6.7,
+        "baselineUtil": 14.0,
+        "predictiveUtil": 4.6,
+        "baselineNodes": 6.0,
+        "predictiveNodes": 18.1,
+        "isBurstEvent": false,
+        "isBreachBaseline": false,
+        "isBreachPredictive": false
+      },
+      {
+        "step": 29,
+        "cores": 7.1,
+        "baselineUtil": 14.7,
+        "predictiveUtil": 4.4,
+        "baselineNodes": 6.0,
+        "predictiveNodes": 20.1,
+        "isBurstEvent": false,
+        "isBreachBaseline": false,
+        "isBreachPredictive": false
+      },
+      {
+        "step": 30,
+        "cores": 31.3,
+        "baselineUtil": 65.1,
+        "predictiveUtil": 17.8,
+        "baselineNodes": 6.0,
+        "predictiveNodes": 22.0,
+        "isBurstEvent": true,
+        "isBreachBaseline": false,
+        "isBreachPredictive": false
+      },
+      {
+        "step": 31,
+        "cores": 32.9,
+        "baselineUtil": 62.3,
+        "predictiveUtil": 18.7,
+        "baselineNodes": 6.6,
+        "predictiveNodes": 22.0,
+        "isBurstEvent": true,
+        "isBreachBaseline": false,
+        "isBreachPredictive": false
+      },
+      {
+        "step": 32,
+        "cores": 34.6,
+        "baselineUtil": 60.0,
+        "predictiveUtil": 19.6,
+        "baselineNodes": 7.2,
+        "predictiveNodes": 22.0,
+        "isBurstEvent": true,
+        "isBreachBaseline": false,
+        "isBreachPredictive": false
+      },
+      {
+        "step": 33,
+        "cores": 36.2,
+        "baselineUtil": 58.0,
+        "predictiveUtil": 20.6,
+        "baselineNodes": 7.8,
+        "predictiveNodes": 22.0,
+        "isBurstEvent": true,
+        "isBreachBaseline": false,
+        "isBreachPredictive": false
+      },
+      {
+        "step": 34,
+        "cores": 37.8,
+        "baselineUtil": 56.2,
+        "predictiveUtil": 21.4,
+        "baselineNodes": 8.4,
+        "predictiveNodes": 22.0,
+        "isBurstEvent": true,
+        "isBreachBaseline": false,
+        "isBreachPredictive": false
+      },
+      {
+        "step": 35,
+        "cores": 39.1,
+        "baselineUtil": 54.3,
+        "predictiveUtil": 22.2,
+        "baselineNodes": 9.0,
+        "predictiveNodes": 22.0,
+        "isBurstEvent": true,
+        "isBreachBaseline": false,
+        "isBreachPredictive": false
+      },
+      {
+        "step": 36,
+        "cores": 40.3,
+        "baselineUtil": 52.4,
+        "predictiveUtil": 22.9,
+        "baselineNodes": 9.6,
+        "predictiveNodes": 22.0,
+        "isBurstEvent": true,
+        "isBreachBaseline": false,
+        "isBreachPredictive": false
+      },
+      {
+        "step": 37,
+        "cores": 41.1,
+        "baselineUtil": 50.4,
+        "predictiveUtil": 23.4,
+        "baselineNodes": 10.2,
+        "predictiveNodes": 22.0,
+        "isBurstEvent": true,
+        "isBreachBaseline": false,
+        "isBreachPredictive": false
+      },
+      {
+        "step": 38,
+        "cores": 41.7,
+        "baselineUtil": 48.3,
+        "predictiveUtil": 23.7,
+        "baselineNodes": 10.8,
+        "predictiveNodes": 22.0,
+        "isBurstEvent": true,
+        "isBreachBaseline": false,
+        "isBreachPredictive": false
+      },
+      {
+        "step": 39,
+        "cores": 42.0,
+        "baselineUtil": 46.0,
+        "predictiveUtil": 23.9,
+        "baselineNodes": 11.4,
+        "predictiveNodes": 22.0,
+        "isBurstEvent": true,
+        "isBreachBaseline": false,
+        "isBreachPredictive": false
+      },
+      {
+        "step": 40,
+        "cores": 41.9,
+        "baselineUtil": 43.7,
+        "predictiveUtil": 23.8,
+        "baselineNodes": 12.0,
+        "predictiveNodes": 22.0,
+        "isBurstEvent": true,
+        "isBreachBaseline": false,
+        "isBreachPredictive": false
+      },
+      {
+        "step": 41,
+        "cores": 41.5,
+        "baselineUtil": 41.2,
+        "predictiveUtil": 23.6,
+        "baselineNodes": 12.6,
+        "predictiveNodes": 22.0,
+        "isBurstEvent": true,
+        "isBreachBaseline": false,
+        "isBreachPredictive": false
+      },
+      {
+        "step": 42,
+        "cores": 40.8,
+        "baselineUtil": 38.6,
+        "predictiveUtil": 23.2,
+        "baselineNodes": 13.2,
+        "predictiveNodes": 22.0,
+        "isBurstEvent": true,
+        "isBreachBaseline": false,
+        "isBreachPredictive": false
+      },
+      {
+        "step": 43,
+        "cores": 39.8,
+        "baselineUtil": 36.0,
+        "predictiveUtil": 22.6,
+        "baselineNodes": 13.8,
+        "predictiveNodes": 22.0,
+        "isBurstEvent": true,
+        "isBreachBaseline": false,
+        "isBreachPredictive": false
+      },
+      {
+        "step": 44,
+        "cores": 38.5,
+        "baselineUtil": 33.4,
+        "predictiveUtil": 21.9,
+        "baselineNodes": 14.4,
+        "predictiveNodes": 22.0,
+        "isBurstEvent": true,
+        "isBreachBaseline": false,
+        "isBreachPredictive": false
+      },
+      {
+        "step": 45,
+        "cores": 37.1,
+        "baselineUtil": 30.9,
+        "predictiveUtil": 21.1,
+        "baselineNodes": 15.0,
+        "predictiveNodes": 22.0,
+        "isBurstEvent": true,
+        "isBreachBaseline": false,
+        "isBreachPredictive": false
+      },
+      {
+        "step": 46,
+        "cores": 8.4,
+        "baselineUtil": 6.9,
+        "predictiveUtil": 5.1,
+        "baselineNodes": 15.3,
+        "predictiveNodes": 20.8,
+        "isBurstEvent": false,
+        "isBreachBaseline": false,
+        "isBreachPredictive": false
+      },
+      {
+        "step": 47,
+        "cores": 8.0,
+        "baselineUtil": 6.9,
+        "predictiveUtil": 5.1,
+        "baselineNodes": 14.6,
+        "predictiveNodes": 19.6,
+        "isBurstEvent": false,
+        "isBreachBaseline": false,
+        "isBreachPredictive": false
+      },
+      {
+        "step": 48,
+        "cores": 7.7,
+        "baselineUtil": 6.9,
+        "predictiveUtil": 5.2,
+        "baselineNodes": 13.9,
+        "predictiveNodes": 18.4,
+        "isBurstEvent": false,
+        "isBreachBaseline": false,
+        "isBreachPredictive": false
+      },
+      {
+        "step": 49,
+        "cores": 7.3,
+        "baselineUtil": 6.9,
+        "predictiveUtil": 5.3,
+        "baselineNodes": 13.2,
+        "predictiveNodes": 17.2,
+        "isBurstEvent": false,
+        "isBreachBaseline": false,
+        "isBreachPredictive": false
+      },
+      {
+        "step": 50,
+        "cores": 6.9,
+        "baselineUtil": 6.9,
+        "predictiveUtil": 5.4,
+        "baselineNodes": 12.5,
+        "predictiveNodes": 16.0,
+        "isBurstEvent": false,
+        "isBreachBaseline": false,
+        "isBreachPredictive": false
+      },
+      {
+        "step": 51,
+        "cores": 6.6,
+        "baselineUtil": 7.0,
+        "predictiveUtil": 5.6,
+        "baselineNodes": 11.8,
+        "predictiveNodes": 14.8,
+        "isBurstEvent": false,
+        "isBreachBaseline": false,
+        "isBreachPredictive": false
+      },
+      {
+        "step": 52,
+        "cores": 6.3,
+        "baselineUtil": 7.1,
+        "predictiveUtil": 5.8,
+        "baselineNodes": 11.1,
+        "predictiveNodes": 13.6,
+        "isBurstEvent": false,
+        "isBreachBaseline": false,
+        "isBreachPredictive": false
+      },
+      {
+        "step": 53,
+        "cores": 6.2,
+        "baselineUtil": 7.4,
+        "predictiveUtil": 6.2,
+        "baselineNodes": 10.4,
+        "predictiveNodes": 12.4,
+        "isBurstEvent": false,
+        "isBreachBaseline": false,
+        "isBreachPredictive": false
+      },
+      {
+        "step": 54,
+        "cores": 6.0,
+        "baselineUtil": 7.8,
+        "predictiveUtil": 6.7,
+        "baselineNodes": 9.7,
+        "predictiveNodes": 11.2,
+        "isBurstEvent": false,
+        "isBreachBaseline": false,
+        "isBreachPredictive": false
+      },
+      {
+        "step": 55,
+        "cores": 6.0,
+        "baselineUtil": 8.3,
+        "predictiveUtil": 7.5,
+        "baselineNodes": 9.0,
+        "predictiveNodes": 10.0,
+        "isBurstEvent": false,
+        "isBreachBaseline": false,
+        "isBreachPredictive": false
+      },
+      {
+        "step": 56,
+        "cores": 6.0,
+        "baselineUtil": 9.1,
+        "predictiveUtil": 8.6,
+        "baselineNodes": 8.3,
+        "predictiveNodes": 8.8,
+        "isBurstEvent": false,
+        "isBreachBaseline": false,
+        "isBreachPredictive": false
+      },
+      {
+        "step": 57,
+        "cores": 6.2,
+        "baselineUtil": 10.1,
+        "predictiveUtil": 10.1,
+        "baselineNodes": 7.6,
+        "predictiveNodes": 7.6,
+        "isBurstEvent": false,
+        "isBreachBaseline": false,
+        "isBreachPredictive": false
+      },
+      {
+        "step": 58,
+        "cores": 6.4,
+        "baselineUtil": 11.5,
+        "predictiveUtil": 12.2,
+        "baselineNodes": 6.9,
+        "predictiveNodes": 6.5,
+        "isBurstEvent": false,
+        "isBreachBaseline": false,
+        "isBreachPredictive": false
+      },
+      {
+        "step": 59,
+        "cores": 6.6,
+        "baselineUtil": 13.3,
+        "predictiveUtil": 12.7,
+        "baselineNodes": 6.2,
+        "predictiveNodes": 6.5,
+        "isBurstEvent": false,
+        "isBreachBaseline": false,
+        "isBreachPredictive": false
+      }
+    ]
+  },
+  "scenario4": {
+    "id": "roi",
+    "title": "Scenario 4: Multi-Objective Financial ROI & Carbon Footprint",
+    "badge": "Strict Pareto Dominance",
+    "tagColor": "emerald",
+    "issue": "Enterprises suffer massive cloud penalties (/hour SLA breach fines) or waste carbon footprint on idle compute.",
+    "solution": "Tier 4 achieves Pareto optimality: eliminates SLA fines completely while GPU DVFS saves 22.5% electrical power.",
+    "vivaScript": "This balance sheet proves that eliminating SLA fines saves .32 over the replay (a 92.6% net cost reduction), while GPU DVFS cuts carbon emissions by 22.5%.",
+    "metrics": [
+      {
+        "label": "Total Financial Spend",
+        "reactive": ".36",
+        "predictive": ".04",
+        "winner": "92.6% Net Savings"
+      },
+      {
+        "label": "SLA Contract Fines",
+        "reactive": ".08",
+        "predictive": ".00",
+        "winner": "Zero Fines"
+      },
+      {
+        "label": "GPU Carbon Emissions",
+        "reactive": "0.71 kg CO2e",
+        "predictive": "0.58 kg CO2e",
+        "winner": "-22.5% Power Saved"
+      }
+    ],
+    "data": [
+      {
+        "step": 0,
+        "baselineCost": 0.0,
+        "predictiveCost": 0.0,
+        "baselineBreaches": 0,
+        "predictiveBreaches": 0,
+        "netSavings": 0.0
+      },
+      {
+        "step": 1,
+        "baselineCost": 0.0,
+        "predictiveCost": 0.0,
+        "baselineBreaches": 0,
+        "predictiveBreaches": 0,
+        "netSavings": 0.0
+      },
+      {
+        "step": 2,
+        "baselineCost": 0.0,
+        "predictiveCost": 0.0,
+        "baselineBreaches": 0,
+        "predictiveBreaches": 0,
+        "netSavings": 0.0
+      },
+      {
+        "step": 3,
+        "baselineCost": 0.0,
+        "predictiveCost": 0.0,
+        "baselineBreaches": 0,
+        "predictiveBreaches": 0,
+        "netSavings": 0.0
+      },
+      {
+        "step": 4,
+        "baselineCost": 0.0,
+        "predictiveCost": 0.0,
+        "baselineBreaches": 0,
+        "predictiveBreaches": 0,
+        "netSavings": 0.0
+      },
+      {
+        "step": 5,
+        "baselineCost": 0.01,
+        "predictiveCost": 0.01,
+        "baselineBreaches": 0,
+        "predictiveBreaches": 0,
+        "netSavings": 0.0
+      },
+      {
+        "step": 6,
+        "baselineCost": 0.01,
+        "predictiveCost": 0.01,
+        "baselineBreaches": 0,
+        "predictiveBreaches": 0,
+        "netSavings": 0.0
+      },
+      {
+        "step": 7,
+        "baselineCost": 0.01,
+        "predictiveCost": 0.01,
+        "baselineBreaches": 0,
+        "predictiveBreaches": 0,
+        "netSavings": 0.0
+      },
+      {
+        "step": 8,
+        "baselineCost": 0.01,
+        "predictiveCost": 0.01,
+        "baselineBreaches": 0,
+        "predictiveBreaches": 0,
+        "netSavings": 0.0
+      },
+      {
+        "step": 9,
+        "baselineCost": 0.01,
+        "predictiveCost": 0.01,
+        "baselineBreaches": 0,
+        "predictiveBreaches": 0,
+        "netSavings": 0.0
+      },
+      {
+        "step": 10,
+        "baselineCost": 0.01,
+        "predictiveCost": 0.01,
+        "baselineBreaches": 0,
+        "predictiveBreaches": 0,
+        "netSavings": 0.0
+      },
+      {
+        "step": 11,
+        "baselineCost": 0.01,
+        "predictiveCost": 0.01,
+        "baselineBreaches": 0,
+        "predictiveBreaches": 0,
+        "netSavings": 0.0
+      },
+      {
+        "step": 12,
+        "baselineCost": 0.02,
+        "predictiveCost": 0.01,
+        "baselineBreaches": 0,
+        "predictiveBreaches": 0,
+        "netSavings": 0.0
+      },
+      {
+        "step": 13,
+        "baselineCost": 0.02,
+        "predictiveCost": 0.01,
+        "baselineBreaches": 0,
+        "predictiveBreaches": 0,
+        "netSavings": 0.01
+      },
+      {
+        "step": 14,
+        "baselineCost": 0.02,
+        "predictiveCost": 0.01,
+        "baselineBreaches": 0,
+        "predictiveBreaches": 0,
+        "netSavings": 0.01
+      },
+      {
+        "step": 15,
+        "baselineCost": 0.02,
+        "predictiveCost": 0.01,
+        "baselineBreaches": 0,
+        "predictiveBreaches": 0,
+        "netSavings": 0.01
+      },
+      {
+        "step": 16,
+        "baselineCost": 0.02,
+        "predictiveCost": 0.01,
+        "baselineBreaches": 0,
+        "predictiveBreaches": 0,
+        "netSavings": 0.01
+      },
+      {
+        "step": 17,
+        "baselineCost": 0.02,
+        "predictiveCost": 0.02,
+        "baselineBreaches": 0,
+        "predictiveBreaches": 0,
+        "netSavings": 0.01
+      },
+      {
+        "step": 18,
+        "baselineCost": 0.02,
+        "predictiveCost": 0.02,
+        "baselineBreaches": 0,
+        "predictiveBreaches": 0,
+        "netSavings": 0.01
+      },
+      {
+        "step": 19,
+        "baselineCost": 0.02,
+        "predictiveCost": 0.02,
+        "baselineBreaches": 0,
+        "predictiveBreaches": 0,
+        "netSavings": 0.01
+      },
+      {
+        "step": 20,
+        "baselineCost": 0.03,
+        "predictiveCost": 0.02,
+        "baselineBreaches": 0,
+        "predictiveBreaches": 0,
+        "netSavings": 0.01
+      },
+      {
+        "step": 21,
+        "baselineCost": 0.03,
+        "predictiveCost": 0.02,
+        "baselineBreaches": 0,
+        "predictiveBreaches": 0,
+        "netSavings": 0.01
+      },
+      {
+        "step": 22,
+        "baselineCost": 0.03,
+        "predictiveCost": 0.02,
+        "baselineBreaches": 0,
+        "predictiveBreaches": 0,
+        "netSavings": 0.01
+      },
+      {
+        "step": 23,
+        "baselineCost": 0.03,
+        "predictiveCost": 0.02,
+        "baselineBreaches": 0,
+        "predictiveBreaches": 0,
+        "netSavings": 0.01
+      },
+      {
+        "step": 24,
+        "baselineCost": 0.03,
+        "predictiveCost": 0.02,
+        "baselineBreaches": 0,
+        "predictiveBreaches": 0,
+        "netSavings": 0.01
+      },
+      {
+        "step": 25,
+        "baselineCost": 0.03,
+        "predictiveCost": 0.02,
+        "baselineBreaches": 0,
+        "predictiveBreaches": 0,
+        "netSavings": 0.01
+      },
+      {
+        "step": 26,
+        "baselineCost": 0.03,
+        "predictiveCost": 0.02,
+        "baselineBreaches": 0,
+        "predictiveBreaches": 0,
+        "netSavings": 0.01
+      },
+      {
+        "step": 27,
+        "baselineCost": 0.03,
+        "predictiveCost": 0.02,
+        "baselineBreaches": 0,
+        "predictiveBreaches": 0,
+        "netSavings": 0.0
+      },
+      {
+        "step": 28,
+        "baselineCost": 0.03,
+        "predictiveCost": 0.03,
+        "baselineBreaches": 0,
+        "predictiveBreaches": 0,
+        "netSavings": 0.0
+      },
+      {
+        "step": 29,
+        "baselineCost": 0.03,
+        "predictiveCost": 0.03,
+        "baselineBreaches": 0,
+        "predictiveBreaches": 0,
+        "netSavings": 0.0
+      },
+      {
+        "step": 30,
+        "baselineCost": 0.03,
+        "predictiveCost": 0.03,
+        "baselineBreaches": 0,
+        "predictiveBreaches": 0,
+        "netSavings": 0.0
+      },
+      {
+        "step": 31,
+        "baselineCost": 0.03,
+        "predictiveCost": 0.03,
+        "baselineBreaches": 0,
+        "predictiveBreaches": 0,
+        "netSavings": 0.0
+      },
+      {
+        "step": 32,
+        "baselineCost": 0.03,
+        "predictiveCost": 0.03,
+        "baselineBreaches": 0,
+        "predictiveBreaches": 0,
+        "netSavings": 0.0
+      },
+      {
+        "step": 33,
+        "baselineCost": 0.03,
+        "predictiveCost": 0.03,
+        "baselineBreaches": 0,
+        "predictiveBreaches": 0,
+        "netSavings": 0.0
+      },
+      {
+        "step": 34,
+        "baselineCost": 0.03,
+        "predictiveCost": 0.03,
+        "baselineBreaches": 0,
+        "predictiveBreaches": 0,
+        "netSavings": 0.0
+      },
+      {
+        "step": 35,
+        "baselineCost": 0.04,
+        "predictiveCost": 0.03,
+        "baselineBreaches": 0,
+        "predictiveBreaches": 0,
+        "netSavings": 0.0
+      },
+      {
+        "step": 36,
+        "baselineCost": 0.04,
+        "predictiveCost": 0.03,
+        "baselineBreaches": 0,
+        "predictiveBreaches": 0,
+        "netSavings": 0.0
+      },
+      {
+        "step": 37,
+        "baselineCost": 0.04,
+        "predictiveCost": 0.03,
+        "baselineBreaches": 0,
+        "predictiveBreaches": 0,
+        "netSavings": 0.0
+      },
+      {
+        "step": 38,
+        "baselineCost": 0.04,
+        "predictiveCost": 0.03,
+        "baselineBreaches": 0,
+        "predictiveBreaches": 0,
+        "netSavings": 0.0
+      },
+      {
+        "step": 39,
+        "baselineCost": 0.04,
+        "predictiveCost": 0.04,
+        "baselineBreaches": 0,
+        "predictiveBreaches": 0,
+        "netSavings": 0.01
+      },
+      {
+        "step": 40,
+        "baselineCost": 0.04,
+        "predictiveCost": 0.04,
+        "baselineBreaches": 0,
+        "predictiveBreaches": 0,
+        "netSavings": 0.01
+      },
+      {
+        "step": 41,
+        "baselineCost": 0.04,
+        "predictiveCost": 0.04,
+        "baselineBreaches": 0,
+        "predictiveBreaches": 0,
+        "netSavings": 0.01
+      },
+      {
+        "step": 42,
+        "baselineCost": 0.04,
+        "predictiveCost": 0.04,
+        "baselineBreaches": 0,
+        "predictiveBreaches": 0,
+        "netSavings": 0.01
+      },
+      {
+        "step": 43,
+        "baselineCost": 0.05,
+        "predictiveCost": 0.04,
+        "baselineBreaches": 0,
+        "predictiveBreaches": 0,
+        "netSavings": 0.01
+      },
+      {
+        "step": 44,
+        "baselineCost": 0.05,
+        "predictiveCost": 0.04,
+        "baselineBreaches": 0,
+        "predictiveBreaches": 0,
+        "netSavings": 0.01
+      },
+      {
+        "step": 45,
+        "baselineCost": 0.05,
+        "predictiveCost": 0.04,
+        "baselineBreaches": 0,
+        "predictiveBreaches": 0,
+        "netSavings": 0.01
+      },
+      {
+        "step": 46,
+        "baselineCost": 0.05,
+        "predictiveCost": 0.04,
+        "baselineBreaches": 0,
+        "predictiveBreaches": 0,
+        "netSavings": 0.01
+      },
+      {
+        "step": 47,
+        "baselineCost": 0.05,
+        "predictiveCost": 0.04,
+        "baselineBreaches": 0,
+        "predictiveBreaches": 0,
+        "netSavings": 0.01
+      },
+      {
+        "step": 48,
+        "baselineCost": 0.05,
+        "predictiveCost": 0.04,
+        "baselineBreaches": 0,
+        "predictiveBreaches": 0,
+        "netSavings": 0.01
+      },
+      {
+        "step": 49,
+        "baselineCost": 0.05,
+        "predictiveCost": 0.04,
+        "baselineBreaches": 0,
+        "predictiveBreaches": 0,
+        "netSavings": 0.01
+      },
+      {
+        "step": 50,
+        "baselineCost": 0.05,
+        "predictiveCost": 0.04,
+        "baselineBreaches": 0,
+        "predictiveBreaches": 0,
+        "netSavings": 0.01
+      },
+      {
+        "step": 51,
+        "baselineCost": 0.06,
+        "predictiveCost": 0.05,
+        "baselineBreaches": 0,
+        "predictiveBreaches": 0,
+        "netSavings": 0.01
+      },
+      {
+        "step": 52,
+        "baselineCost": 0.06,
+        "predictiveCost": 0.05,
+        "baselineBreaches": 0,
+        "predictiveBreaches": 0,
+        "netSavings": 0.01
+      },
+      {
+        "step": 53,
+        "baselineCost": 0.06,
+        "predictiveCost": 0.05,
+        "baselineBreaches": 0,
+        "predictiveBreaches": 0,
+        "netSavings": 0.01
+      },
+      {
+        "step": 54,
+        "baselineCost": 0.06,
+        "predictiveCost": 0.05,
+        "baselineBreaches": 0,
+        "predictiveBreaches": 0,
+        "netSavings": 0.01
+      },
+      {
+        "step": 55,
+        "baselineCost": 0.06,
+        "predictiveCost": 0.05,
+        "baselineBreaches": 0,
+        "predictiveBreaches": 0,
+        "netSavings": 0.01
+      },
+      {
+        "step": 56,
+        "baselineCost": 0.06,
+        "predictiveCost": 0.05,
+        "baselineBreaches": 0,
+        "predictiveBreaches": 0,
+        "netSavings": 0.01
+      },
+      {
+        "step": 57,
+        "baselineCost": 0.06,
+        "predictiveCost": 0.05,
+        "baselineBreaches": 0,
+        "predictiveBreaches": 0,
+        "netSavings": 0.01
+      },
+      {
+        "step": 58,
+        "baselineCost": 0.06,
+        "predictiveCost": 0.05,
+        "baselineBreaches": 0,
+        "predictiveBreaches": 0,
+        "netSavings": 0.01
+      },
+      {
+        "step": 59,
+        "baselineCost": 0.06,
+        "predictiveCost": 0.05,
+        "baselineBreaches": 0,
+        "predictiveBreaches": 0,
+        "netSavings": 0.01
+      }
+    ]
+  }
+}

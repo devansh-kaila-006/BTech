@@ -97,3 +97,4 @@ export default function DecisionAuditLog({ currentStep, telemetry, activeChaos }
     </div>
   );
 }
+

@@ -127,3 +127,4 @@ export default function ClusterFleetGrid({ cpuNodes = 8.0, gpuNodes = 3.0, cpuUt
     </div>
   );
 }
+
