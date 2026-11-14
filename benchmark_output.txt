@@ -1,0 +1,11 @@
+Running Ablation Benchmark: Memory & Throughput (Processing 50,000 pods)
+
+--- Benchmarking Naive Static Pandas ---
+Time Taken: 56.84 seconds
+Throughput: 880 rows/sec
+Peak Memory: 6.71 MB
+
+--- Benchmarking PyArrow Streaming Engine ---
+Time Taken: 12.30 seconds
+Throughput: 4064 rows/sec
+Peak Memory: 1.04 MB

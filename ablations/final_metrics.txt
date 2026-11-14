@@ -1,0 +1,4 @@
+Baseline Final Reward: -3298.49
+Predictive Final Reward: -3493.32
+Baseline Total Delay Penalty: -3192.89
+Predictive Total Delay Penalty: -3384.57

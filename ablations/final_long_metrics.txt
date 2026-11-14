@@ -1,0 +1,11 @@
+--- BASELINE (100k Steps) ---
+Cumulative Reward: -13157.69
+SLA Breach Count: 2692
+Max Delay Penalty: -117.00
+Average Nodes: 7.85
+
+--- PREDICTIVE (100k Steps) ---
+Cumulative Reward: -12532.24
+SLA Breach Count: 1807
+Max Delay Penalty: -117.00
+Average Nodes: 8.87
