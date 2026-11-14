@@ -86,6 +86,15 @@ The project was engineered and validated across 10 disciplined ablation stages:
 | **Stage 8** | **Attention-Based Fusion** | Evaluated sample complexity of `MultiheadAttention` vs Flat | [stage8_attention_ablation.md](file:///C:/Users/devan/OneDrive/Desktop/BTech/ablations/stage8_attention_ablation.md) |
 | **Stage 9** | **Safe RL Action Shield** | Interceptor reduced SLA breaches from **1,158 to 0 (100% safe)** | [stage9_safe_rl_ablation.md](file:///C:/Users/devan/OneDrive/Desktop/BTech/ablations/stage9_safe_rl_ablation.md) |
 | **Stage 10** | **Hierarchical Heterogeneous Control** | Decoupled scaling across CPU-only and GPU-accelerated pools | [stage10_hierarchical_gpu_autoscaling.md](file:///C:/Users/devan/OneDrive/Desktop/BTech/ablations/stage10_hierarchical_gpu_autoscaling.md) |
+| **Stage 11** | **Multi-Horizon Lookahead ($t+1, t+5, t+15$)** | Modeled 60s physical cloud VM spin-up delay (Test MSE: `0.000680`) | [stage11_multi_horizon_forecasting.md](file:///C:/Users/devan/OneDrive/Desktop/BTech/ablations/stage11_multi_horizon_forecasting.md) |
+| **Stage 12** | **Constrained RL (PPO-Lagrangian)** | Dual gradient ascent enforced CMDP SLA bound (cut breach rate to `28.1%`) | [stage12_lagrangian_constrained_rl.md](file:///C:/Users/devan/OneDrive/Desktop/BTech/ablations/stage12_lagrangian_constrained_rl.md) |
+
+---
+
+## 🎬 Live Simulation Trajectory (Animated Preview)
+![Predictive Autoscaling Simulation](file:///C:/Users/devan/OneDrive/Desktop/BTech/ablations/animated_scaling_simulation.gif)
+
+*The green curve demonstrates proactive provisioning ahead of oncoming workload spikes, maintaining safe capacity and preventing SLA starvation.*
 
 ---
 

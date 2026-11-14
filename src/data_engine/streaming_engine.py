@@ -26,7 +26,13 @@ class StreamingIngester:
     def _create_stream(self):
         """Yields chunks of data to avoid loading the entire dataset into memory."""
         rows_skipped = 0
-        for batch in self.parquet_file.iter_batches(batch_size=self.batch_size):
+        # Use fast batch skipping for large start offsets
+        skip_chunk_size = 5000
+        for batch in self.parquet_file.iter_batches(batch_size=skip_chunk_size):
+            num_rows = batch.num_rows
+            if rows_skipped + num_rows <= self.start_offset:
+                rows_skipped += num_rows
+                continue
             df_chunk = batch.to_pandas()
             for _, row in df_chunk.iterrows():
                 if rows_skipped < self.start_offset:

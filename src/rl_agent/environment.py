@@ -78,8 +78,13 @@ class K8sScalingEnv(gym.Env):
         done = False
         if pod is None or self.current_step >= self.max_steps:
             done = True
-            # Return dummy state of matching observation space shape if done
-            return np.zeros(self.observation_space.shape, dtype=np.float32), 0.0, done, False, {}
+            info = {
+                'nodes': self.current_nodes,
+                'utilization': 0.0,
+                'reward_power': -(self.current_nodes * 0.1),
+                'reward_delay': 0.0
+            }
+            return np.zeros(self.observation_space.shape, dtype=np.float32), 0.0, done, False, info
             
         self.buffer.add(pod)
         

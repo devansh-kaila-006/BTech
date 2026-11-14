@@ -104,6 +104,8 @@ Decouples cluster infrastructure into:
 | **8** | Attention-Based Fusion | Flat Concat proved superior over MultiheadAttention in short-horizon RL |
 | **9** | Safe RL Action Shield | **100% SLA compliance: 0 breaches (down from 1,158)** |
 | **10** | Hierarchical Heterogeneous | Decoupled scaling across CPU-optimized and GPU-accelerated node pools |
+| **11** | Multi-Horizon Lookahead | Modeled 60s physical cloud VM spin-up delay across $[t+1, t+5, t+15]$ (MSE: `0.000680`) |
+| **12** | Constrained RL (PPO-Lagrangian) | Dual gradient ascent enforced CMDP SLA bound (reduced breach rate to `28.1%`) |
 
 ---
 
