@@ -273,3 +273,4 @@ if __name__ == "__main__":
     generate_pareto_roi_gif()
     generate_lagrangian_dual_gif()
     print("\nAll additional animations generated successfully!")
+

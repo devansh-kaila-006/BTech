@@ -143,6 +143,12 @@ BTech/
 │   ├── stage8_attention_ablation.md
 │   ├── stage9_safe_rl_ablation.md
 │   └── stage10_hierarchical_gpu_autoscaling.md
+├── dashboard/                    # React 19 + Vite Operations Center Web Dashboard
+│   ├── src/
+│   │   ├── components/           # Telemetry charts, gauges, playback controls, chaos injector
+│   │   ├── data/                 # High-fidelity Alibaba trace sample (250 events)
+│   │   └── App.jsx
+│   └── package.json
 ├── data/
 │   ├── raw/                      # Raw Alibaba CSV cluster traces
 │   └── processed/                # Normalized Parquet files (cleaned_trace.parquet)
@@ -255,6 +261,15 @@ docker-compose up -d
 # Deploy to Kubernetes cluster
 kubectl apply -f deploy/k8s/autoscaler-deployment.yaml
 ```
+
+### 9. Interactive React + Vite Web Dashboard
+```bash
+# Launch modern dark-mode cloud operations center
+cd dashboard
+npm install
+npm run dev
+```
+Open **`http://localhost:5173`** in your browser for live simulation playback, chaos injection, and Pareto analysis.
 
 ---
 

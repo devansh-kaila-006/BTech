@@ -1,0 +1,2002 @@
+[
+  {
+    "step": 0,
+    "cpu_norm": 0.0666,
+    "mem_norm": 0.0414,
+    "workload_type": 0,
+    "cores_demanded": 6.66,
+    "memory_gb": 2.65
+  },
+  {
+    "step": 1,
+    "cpu_norm": 0.0666,
+    "mem_norm": 0.0414,
+    "workload_type": 0,
+    "cores_demanded": 6.66,
+    "memory_gb": 2.65
+  },
+  {
+    "step": 2,
+    "cpu_norm": 0.0666,
+    "mem_norm": 0.0414,
+    "workload_type": 0,
+    "cores_demanded": 6.66,
+    "memory_gb": 2.65
+  },
+  {
+    "step": 3,
+    "cpu_norm": 0.0666,
+    "mem_norm": 0.0414,
+    "workload_type": 1,
+    "cores_demanded": 6.66,
+    "memory_gb": 2.65
+  },
+  {
+    "step": 4,
+    "cpu_norm": 0.0666,
+    "mem_norm": 0.0414,
+    "workload_type": 0,
+    "cores_demanded": 6.66,
+    "memory_gb": 2.65
+  },
+  {
+    "step": 5,
+    "cpu_norm": 0.0666,
+    "mem_norm": 0.0414,
+    "workload_type": 0,
+    "cores_demanded": 6.66,
+    "memory_gb": 2.65
+  },
+  {
+    "step": 6,
+    "cpu_norm": 0.0666,
+    "mem_norm": 0.0414,
+    "workload_type": 0,
+    "cores_demanded": 6.66,
+    "memory_gb": 2.65
+  },
+  {
+    "step": 7,
+    "cpu_norm": 0.0666,
+    "mem_norm": 0.0414,
+    "workload_type": 0,
+    "cores_demanded": 6.66,
+    "memory_gb": 2.65
+  },
+  {
+    "step": 8,
+    "cpu_norm": 0.0666,
+    "mem_norm": 0.0414,
+    "workload_type": 0,
+    "cores_demanded": 6.66,
+    "memory_gb": 2.65
+  },
+  {
+    "step": 9,
+    "cpu_norm": 0.0666,
+    "mem_norm": 0.0414,
+    "workload_type": 1,
+    "cores_demanded": 6.66,
+    "memory_gb": 2.65
+  },
+  {
+    "step": 10,
+    "cpu_norm": 0.0666,
+    "mem_norm": 0.0414,
+    "workload_type": 1,
+    "cores_demanded": 6.66,
+    "memory_gb": 2.65
+  },
+  {
+    "step": 11,
+    "cpu_norm": 0.0666,
+    "mem_norm": 0.0414,
+    "workload_type": 0,
+    "cores_demanded": 6.66,
+    "memory_gb": 2.65
+  },
+  {
+    "step": 12,
+    "cpu_norm": 0.0666,
+    "mem_norm": 0.0414,
+    "workload_type": 0,
+    "cores_demanded": 6.66,
+    "memory_gb": 2.65
+  },
+  {
+    "step": 13,
+    "cpu_norm": 0.0333,
+    "mem_norm": 0.0333,
+    "workload_type": 1,
+    "cores_demanded": 3.33,
+    "memory_gb": 2.13
+  },
+  {
+    "step": 14,
+    "cpu_norm": 0.0333,
+    "mem_norm": 0.0333,
+    "workload_type": 1,
+    "cores_demanded": 3.33,
+    "memory_gb": 2.13
+  },
+  {
+    "step": 15,
+    "cpu_norm": 0.0333,
+    "mem_norm": 0.0333,
+    "workload_type": 0,
+    "cores_demanded": 3.33,
+    "memory_gb": 2.13
+  },
+  {
+    "step": 16,
+    "cpu_norm": 0.0333,
+    "mem_norm": 0.0333,
+    "workload_type": 0,
+    "cores_demanded": 3.33,
+    "memory_gb": 2.13
+  },
+  {
+    "step": 17,
+    "cpu_norm": 0.0333,
+    "mem_norm": 0.0333,
+    "workload_type": 1,
+    "cores_demanded": 3.33,
+    "memory_gb": 2.13
+  },
+  {
+    "step": 18,
+    "cpu_norm": 0.0333,
+    "mem_norm": 0.0333,
+    "workload_type": 1,
+    "cores_demanded": 3.33,
+    "memory_gb": 2.13
+  },
+  {
+    "step": 19,
+    "cpu_norm": 0.0333,
+    "mem_norm": 0.0333,
+    "workload_type": 0,
+    "cores_demanded": 3.33,
+    "memory_gb": 2.13
+  },
+  {
+    "step": 20,
+    "cpu_norm": 0.0333,
+    "mem_norm": 0.0333,
+    "workload_type": 0,
+    "cores_demanded": 3.33,
+    "memory_gb": 2.13
+  },
+  {
+    "step": 21,
+    "cpu_norm": 0.0333,
+    "mem_norm": 0.0333,
+    "workload_type": 0,
+    "cores_demanded": 3.33,
+    "memory_gb": 2.13
+  },
+  {
+    "step": 22,
+    "cpu_norm": 0.0333,
+    "mem_norm": 0.0333,
+    "workload_type": 0,
+    "cores_demanded": 3.33,
+    "memory_gb": 2.13
+  },
+  {
+    "step": 23,
+    "cpu_norm": 0.0333,
+    "mem_norm": 0.0333,
+    "workload_type": 1,
+    "cores_demanded": 3.33,
+    "memory_gb": 2.13
+  },
+  {
+    "step": 24,
+    "cpu_norm": 0.0333,
+    "mem_norm": 0.0333,
+    "workload_type": 0,
+    "cores_demanded": 3.33,
+    "memory_gb": 2.13
+  },
+  {
+    "step": 25,
+    "cpu_norm": 0.0333,
+    "mem_norm": 0.0333,
+    "workload_type": 0,
+    "cores_demanded": 3.33,
+    "memory_gb": 2.13
+  },
+  {
+    "step": 26,
+    "cpu_norm": 0.0333,
+    "mem_norm": 0.0333,
+    "workload_type": 0,
+    "cores_demanded": 3.33,
+    "memory_gb": 2.13
+  },
+  {
+    "step": 27,
+    "cpu_norm": 0.0333,
+    "mem_norm": 0.0333,
+    "workload_type": 1,
+    "cores_demanded": 3.33,
+    "memory_gb": 2.13
+  },
+  {
+    "step": 28,
+    "cpu_norm": 0.2662,
+    "mem_norm": 0.0667,
+    "workload_type": 0,
+    "cores_demanded": 26.62,
+    "memory_gb": 4.27
+  },
+  {
+    "step": 29,
+    "cpu_norm": 0.2662,
+    "mem_norm": 0.0667,
+    "workload_type": 0,
+    "cores_demanded": 26.62,
+    "memory_gb": 4.27
+  },
+  {
+    "step": 30,
+    "cpu_norm": 0.2662,
+    "mem_norm": 0.0667,
+    "workload_type": 0,
+    "cores_demanded": 26.62,
+    "memory_gb": 4.27
+  },
+  {
+    "step": 31,
+    "cpu_norm": 0.2662,
+    "mem_norm": 0.0667,
+    "workload_type": 0,
+    "cores_demanded": 26.62,
+    "memory_gb": 4.27
+  },
+  {
+    "step": 32,
+    "cpu_norm": 0.2662,
+    "mem_norm": 0.0667,
+    "workload_type": 1,
+    "cores_demanded": 26.62,
+    "memory_gb": 4.27
+  },
+  {
+    "step": 33,
+    "cpu_norm": 0.2662,
+    "mem_norm": 0.0667,
+    "workload_type": 0,
+    "cores_demanded": 26.62,
+    "memory_gb": 4.27
+  },
+  {
+    "step": 34,
+    "cpu_norm": 0.2662,
+    "mem_norm": 0.0667,
+    "workload_type": 1,
+    "cores_demanded": 26.62,
+    "memory_gb": 4.27
+  },
+  {
+    "step": 35,
+    "cpu_norm": 0.2662,
+    "mem_norm": 0.0667,
+    "workload_type": 1,
+    "cores_demanded": 26.62,
+    "memory_gb": 4.27
+  },
+  {
+    "step": 36,
+    "cpu_norm": 0.2662,
+    "mem_norm": 0.0667,
+    "workload_type": 0,
+    "cores_demanded": 26.62,
+    "memory_gb": 4.27
+  },
+  {
+    "step": 37,
+    "cpu_norm": 0.2662,
+    "mem_norm": 0.0667,
+    "workload_type": 1,
+    "cores_demanded": 26.62,
+    "memory_gb": 4.27
+  },
+  {
+    "step": 38,
+    "cpu_norm": 0.2662,
+    "mem_norm": 0.0667,
+    "workload_type": 0,
+    "cores_demanded": 26.62,
+    "memory_gb": 4.27
+  },
+  {
+    "step": 39,
+    "cpu_norm": 0.2662,
+    "mem_norm": 0.0667,
+    "workload_type": 1,
+    "cores_demanded": 26.62,
+    "memory_gb": 4.27
+  },
+  {
+    "step": 40,
+    "cpu_norm": 0.2662,
+    "mem_norm": 0.0667,
+    "workload_type": 0,
+    "cores_demanded": 26.62,
+    "memory_gb": 4.27
+  },
+  {
+    "step": 41,
+    "cpu_norm": 0.2662,
+    "mem_norm": 0.0667,
+    "workload_type": 1,
+    "cores_demanded": 26.62,
+    "memory_gb": 4.27
+  },
+  {
+    "step": 42,
+    "cpu_norm": 0.2662,
+    "mem_norm": 0.0667,
+    "workload_type": 0,
+    "cores_demanded": 26.62,
+    "memory_gb": 4.27
+  },
+  {
+    "step": 43,
+    "cpu_norm": 0.2662,
+    "mem_norm": 0.0667,
+    "workload_type": 0,
+    "cores_demanded": 26.62,
+    "memory_gb": 4.27
+  },
+  {
+    "step": 44,
+    "cpu_norm": 0.2662,
+    "mem_norm": 0.0667,
+    "workload_type": 0,
+    "cores_demanded": 26.62,
+    "memory_gb": 4.27
+  },
+  {
+    "step": 45,
+    "cpu_norm": 0.2662,
+    "mem_norm": 0.0667,
+    "workload_type": 1,
+    "cores_demanded": 26.62,
+    "memory_gb": 4.27
+  },
+  {
+    "step": 46,
+    "cpu_norm": 0.2662,
+    "mem_norm": 0.0667,
+    "workload_type": 1,
+    "cores_demanded": 26.62,
+    "memory_gb": 4.27
+  },
+  {
+    "step": 47,
+    "cpu_norm": 0.2662,
+    "mem_norm": 0.0667,
+    "workload_type": 1,
+    "cores_demanded": 26.62,
+    "memory_gb": 4.27
+  },
+  {
+    "step": 48,
+    "cpu_norm": 0.2662,
+    "mem_norm": 0.0667,
+    "workload_type": 1,
+    "cores_demanded": 26.62,
+    "memory_gb": 4.27
+  },
+  {
+    "step": 49,
+    "cpu_norm": 0.2662,
+    "mem_norm": 0.0667,
+    "workload_type": 0,
+    "cores_demanded": 26.62,
+    "memory_gb": 4.27
+  },
+  {
+    "step": 50,
+    "cpu_norm": 0.2662,
+    "mem_norm": 0.0667,
+    "workload_type": 0,
+    "cores_demanded": 26.62,
+    "memory_gb": 4.27
+  },
+  {
+    "step": 51,
+    "cpu_norm": 0.2662,
+    "mem_norm": 0.0667,
+    "workload_type": 0,
+    "cores_demanded": 26.62,
+    "memory_gb": 4.27
+  },
+  {
+    "step": 52,
+    "cpu_norm": 0.2662,
+    "mem_norm": 0.0667,
+    "workload_type": 0,
+    "cores_demanded": 26.62,
+    "memory_gb": 4.27
+  },
+  {
+    "step": 53,
+    "cpu_norm": 0.2662,
+    "mem_norm": 0.0667,
+    "workload_type": 1,
+    "cores_demanded": 26.62,
+    "memory_gb": 4.27
+  },
+  {
+    "step": 54,
+    "cpu_norm": 0.2662,
+    "mem_norm": 0.0667,
+    "workload_type": 0,
+    "cores_demanded": 26.62,
+    "memory_gb": 4.27
+  },
+  {
+    "step": 55,
+    "cpu_norm": 0.2662,
+    "mem_norm": 0.0667,
+    "workload_type": 1,
+    "cores_demanded": 26.62,
+    "memory_gb": 4.27
+  },
+  {
+    "step": 56,
+    "cpu_norm": 0.2662,
+    "mem_norm": 0.0667,
+    "workload_type": 0,
+    "cores_demanded": 26.62,
+    "memory_gb": 4.27
+  },
+  {
+    "step": 57,
+    "cpu_norm": 0.2662,
+    "mem_norm": 0.0667,
+    "workload_type": 0,
+    "cores_demanded": 26.62,
+    "memory_gb": 4.27
+  },
+  {
+    "step": 58,
+    "cpu_norm": 0.0333,
+    "mem_norm": 0.0333,
+    "workload_type": 1,
+    "cores_demanded": 3.33,
+    "memory_gb": 2.13
+  },
+  {
+    "step": 59,
+    "cpu_norm": 0.0499,
+    "mem_norm": 0.0083,
+    "workload_type": 0,
+    "cores_demanded": 4.99,
+    "memory_gb": 0.53
+  },
+  {
+    "step": 60,
+    "cpu_norm": 0.0499,
+    "mem_norm": 0.0083,
+    "workload_type": 1,
+    "cores_demanded": 4.99,
+    "memory_gb": 0.53
+  },
+  {
+    "step": 61,
+    "cpu_norm": 0.0499,
+    "mem_norm": 0.0083,
+    "workload_type": 1,
+    "cores_demanded": 4.99,
+    "memory_gb": 0.53
+  },
+  {
+    "step": 62,
+    "cpu_norm": 0.0499,
+    "mem_norm": 0.0083,
+    "workload_type": 0,
+    "cores_demanded": 4.99,
+    "memory_gb": 0.53
+  },
+  {
+    "step": 63,
+    "cpu_norm": 0.0499,
+    "mem_norm": 0.0083,
+    "workload_type": 0,
+    "cores_demanded": 4.99,
+    "memory_gb": 0.53
+  },
+  {
+    "step": 64,
+    "cpu_norm": 0.0499,
+    "mem_norm": 0.0083,
+    "workload_type": 0,
+    "cores_demanded": 4.99,
+    "memory_gb": 0.53
+  },
+  {
+    "step": 65,
+    "cpu_norm": 0.0499,
+    "mem_norm": 0.0083,
+    "workload_type": 0,
+    "cores_demanded": 4.99,
+    "memory_gb": 0.53
+  },
+  {
+    "step": 66,
+    "cpu_norm": 0.0499,
+    "mem_norm": 0.0083,
+    "workload_type": 0,
+    "cores_demanded": 4.99,
+    "memory_gb": 0.53
+  },
+  {
+    "step": 67,
+    "cpu_norm": 0.0499,
+    "mem_norm": 0.0083,
+    "workload_type": 1,
+    "cores_demanded": 4.99,
+    "memory_gb": 0.53
+  },
+  {
+    "step": 68,
+    "cpu_norm": 0.0499,
+    "mem_norm": 0.0083,
+    "workload_type": 0,
+    "cores_demanded": 4.99,
+    "memory_gb": 0.53
+  },
+  {
+    "step": 69,
+    "cpu_norm": 0.0499,
+    "mem_norm": 0.0083,
+    "workload_type": 0,
+    "cores_demanded": 4.99,
+    "memory_gb": 0.53
+  },
+  {
+    "step": 70,
+    "cpu_norm": 0.0499,
+    "mem_norm": 0.0083,
+    "workload_type": 1,
+    "cores_demanded": 4.99,
+    "memory_gb": 0.53
+  },
+  {
+    "step": 71,
+    "cpu_norm": 0.0499,
+    "mem_norm": 0.0083,
+    "workload_type": 1,
+    "cores_demanded": 4.99,
+    "memory_gb": 0.53
+  },
+  {
+    "step": 72,
+    "cpu_norm": 0.0499,
+    "mem_norm": 0.0083,
+    "workload_type": 0,
+    "cores_demanded": 4.99,
+    "memory_gb": 0.53
+  },
+  {
+    "step": 73,
+    "cpu_norm": 0.0499,
+    "mem_norm": 0.0083,
+    "workload_type": 1,
+    "cores_demanded": 4.99,
+    "memory_gb": 0.53
+  },
+  {
+    "step": 74,
+    "cpu_norm": 0.0499,
+    "mem_norm": 0.0083,
+    "workload_type": 1,
+    "cores_demanded": 4.99,
+    "memory_gb": 0.53
+  },
+  {
+    "step": 75,
+    "cpu_norm": 0.2662,
+    "mem_norm": 0.0667,
+    "workload_type": 1,
+    "cores_demanded": 26.62,
+    "memory_gb": 4.27
+  },
+  {
+    "step": 76,
+    "cpu_norm": 0.2662,
+    "mem_norm": 0.0667,
+    "workload_type": 0,
+    "cores_demanded": 26.62,
+    "memory_gb": 4.27
+  },
+  {
+    "step": 77,
+    "cpu_norm": 0.2662,
+    "mem_norm": 0.0667,
+    "workload_type": 0,
+    "cores_demanded": 26.62,
+    "memory_gb": 4.27
+  },
+  {
+    "step": 78,
+    "cpu_norm": 0.2662,
+    "mem_norm": 0.0667,
+    "workload_type": 0,
+    "cores_demanded": 26.62,
+    "memory_gb": 4.27
+  },
+  {
+    "step": 79,
+    "cpu_norm": 0.2662,
+    "mem_norm": 0.0667,
+    "workload_type": 0,
+    "cores_demanded": 26.62,
+    "memory_gb": 4.27
+  },
+  {
+    "step": 80,
+    "cpu_norm": 0.2662,
+    "mem_norm": 0.0667,
+    "workload_type": 0,
+    "cores_demanded": 26.62,
+    "memory_gb": 4.27
+  },
+  {
+    "step": 81,
+    "cpu_norm": 0.2662,
+    "mem_norm": 0.0667,
+    "workload_type": 0,
+    "cores_demanded": 26.62,
+    "memory_gb": 4.27
+  },
+  {
+    "step": 82,
+    "cpu_norm": 0.2662,
+    "mem_norm": 0.0667,
+    "workload_type": 0,
+    "cores_demanded": 26.62,
+    "memory_gb": 4.27
+  },
+  {
+    "step": 83,
+    "cpu_norm": 0.2662,
+    "mem_norm": 0.0667,
+    "workload_type": 0,
+    "cores_demanded": 26.62,
+    "memory_gb": 4.27
+  },
+  {
+    "step": 84,
+    "cpu_norm": 0.2662,
+    "mem_norm": 0.0667,
+    "workload_type": 1,
+    "cores_demanded": 26.62,
+    "memory_gb": 4.27
+  },
+  {
+    "step": 85,
+    "cpu_norm": 0.2662,
+    "mem_norm": 0.0667,
+    "workload_type": 1,
+    "cores_demanded": 26.62,
+    "memory_gb": 4.27
+  },
+  {
+    "step": 86,
+    "cpu_norm": 0.2662,
+    "mem_norm": 0.0667,
+    "workload_type": 0,
+    "cores_demanded": 26.62,
+    "memory_gb": 4.27
+  },
+  {
+    "step": 87,
+    "cpu_norm": 0.2662,
+    "mem_norm": 0.0667,
+    "workload_type": 0,
+    "cores_demanded": 26.62,
+    "memory_gb": 4.27
+  },
+  {
+    "step": 88,
+    "cpu_norm": 0.2662,
+    "mem_norm": 0.0667,
+    "workload_type": 1,
+    "cores_demanded": 26.62,
+    "memory_gb": 4.27
+  },
+  {
+    "step": 89,
+    "cpu_norm": 0.2662,
+    "mem_norm": 0.0667,
+    "workload_type": 0,
+    "cores_demanded": 26.62,
+    "memory_gb": 4.27
+  },
+  {
+    "step": 90,
+    "cpu_norm": 0.2662,
+    "mem_norm": 0.0667,
+    "workload_type": 1,
+    "cores_demanded": 26.62,
+    "memory_gb": 4.27
+  },
+  {
+    "step": 91,
+    "cpu_norm": 0.2662,
+    "mem_norm": 0.0667,
+    "workload_type": 0,
+    "cores_demanded": 26.62,
+    "memory_gb": 4.27
+  },
+  {
+    "step": 92,
+    "cpu_norm": 0.2662,
+    "mem_norm": 0.0667,
+    "workload_type": 0,
+    "cores_demanded": 26.62,
+    "memory_gb": 4.27
+  },
+  {
+    "step": 93,
+    "cpu_norm": 0.2662,
+    "mem_norm": 0.0667,
+    "workload_type": 0,
+    "cores_demanded": 26.62,
+    "memory_gb": 4.27
+  },
+  {
+    "step": 94,
+    "cpu_norm": 0.2662,
+    "mem_norm": 0.0667,
+    "workload_type": 1,
+    "cores_demanded": 26.62,
+    "memory_gb": 4.27
+  },
+  {
+    "step": 95,
+    "cpu_norm": 0.094,
+    "mem_norm": 0.0667,
+    "workload_type": 0,
+    "cores_demanded": 9.4,
+    "memory_gb": 4.27
+  },
+  {
+    "step": 96,
+    "cpu_norm": 0.094,
+    "mem_norm": 0.0667,
+    "workload_type": 0,
+    "cores_demanded": 9.4,
+    "memory_gb": 4.27
+  },
+  {
+    "step": 97,
+    "cpu_norm": 0.094,
+    "mem_norm": 0.0667,
+    "workload_type": 1,
+    "cores_demanded": 9.4,
+    "memory_gb": 4.27
+  },
+  {
+    "step": 98,
+    "cpu_norm": 0.094,
+    "mem_norm": 0.0667,
+    "workload_type": 0,
+    "cores_demanded": 9.4,
+    "memory_gb": 4.27
+  },
+  {
+    "step": 99,
+    "cpu_norm": 0.094,
+    "mem_norm": 0.0667,
+    "workload_type": 0,
+    "cores_demanded": 9.4,
+    "memory_gb": 4.27
+  },
+  {
+    "step": 100,
+    "cpu_norm": 0.094,
+    "mem_norm": 0.0667,
+    "workload_type": 0,
+    "cores_demanded": 9.4,
+    "memory_gb": 4.27
+  },
+  {
+    "step": 101,
+    "cpu_norm": 0.094,
+    "mem_norm": 0.0667,
+    "workload_type": 1,
+    "cores_demanded": 9.4,
+    "memory_gb": 4.27
+  },
+  {
+    "step": 102,
+    "cpu_norm": 0.094,
+    "mem_norm": 0.0667,
+    "workload_type": 0,
+    "cores_demanded": 9.4,
+    "memory_gb": 4.27
+  },
+  {
+    "step": 103,
+    "cpu_norm": 0.094,
+    "mem_norm": 0.0667,
+    "workload_type": 0,
+    "cores_demanded": 9.4,
+    "memory_gb": 4.27
+  },
+  {
+    "step": 104,
+    "cpu_norm": 0.094,
+    "mem_norm": 0.0667,
+    "workload_type": 0,
+    "cores_demanded": 9.4,
+    "memory_gb": 4.27
+  },
+  {
+    "step": 105,
+    "cpu_norm": 0.094,
+    "mem_norm": 0.0667,
+    "workload_type": 1,
+    "cores_demanded": 9.4,
+    "memory_gb": 4.27
+  },
+  {
+    "step": 106,
+    "cpu_norm": 0.094,
+    "mem_norm": 0.0667,
+    "workload_type": 1,
+    "cores_demanded": 9.4,
+    "memory_gb": 4.27
+  },
+  {
+    "step": 107,
+    "cpu_norm": 0.094,
+    "mem_norm": 0.0667,
+    "workload_type": 1,
+    "cores_demanded": 9.4,
+    "memory_gb": 4.27
+  },
+  {
+    "step": 108,
+    "cpu_norm": 0.094,
+    "mem_norm": 0.0667,
+    "workload_type": 0,
+    "cores_demanded": 9.4,
+    "memory_gb": 4.27
+  },
+  {
+    "step": 109,
+    "cpu_norm": 0.0333,
+    "mem_norm": 0.031,
+    "workload_type": 0,
+    "cores_demanded": 3.33,
+    "memory_gb": 1.99
+  },
+  {
+    "step": 110,
+    "cpu_norm": 0.0333,
+    "mem_norm": 0.031,
+    "workload_type": 1,
+    "cores_demanded": 3.33,
+    "memory_gb": 1.99
+  },
+  {
+    "step": 111,
+    "cpu_norm": 0.0333,
+    "mem_norm": 0.031,
+    "workload_type": 0,
+    "cores_demanded": 3.33,
+    "memory_gb": 1.99
+  },
+  {
+    "step": 112,
+    "cpu_norm": 0.0333,
+    "mem_norm": 0.031,
+    "workload_type": 1,
+    "cores_demanded": 3.33,
+    "memory_gb": 1.99
+  },
+  {
+    "step": 113,
+    "cpu_norm": 0.0333,
+    "mem_norm": 0.031,
+    "workload_type": 0,
+    "cores_demanded": 3.33,
+    "memory_gb": 1.99
+  },
+  {
+    "step": 114,
+    "cpu_norm": 0.0333,
+    "mem_norm": 0.031,
+    "workload_type": 1,
+    "cores_demanded": 3.33,
+    "memory_gb": 1.99
+  },
+  {
+    "step": 115,
+    "cpu_norm": 0.0333,
+    "mem_norm": 0.031,
+    "workload_type": 1,
+    "cores_demanded": 3.33,
+    "memory_gb": 1.99
+  },
+  {
+    "step": 116,
+    "cpu_norm": 0.0333,
+    "mem_norm": 0.031,
+    "workload_type": 1,
+    "cores_demanded": 3.33,
+    "memory_gb": 1.99
+  },
+  {
+    "step": 117,
+    "cpu_norm": 0.0333,
+    "mem_norm": 0.031,
+    "workload_type": 0,
+    "cores_demanded": 3.33,
+    "memory_gb": 1.99
+  },
+  {
+    "step": 118,
+    "cpu_norm": 0.0333,
+    "mem_norm": 0.031,
+    "workload_type": 0,
+    "cores_demanded": 3.33,
+    "memory_gb": 1.99
+  },
+  {
+    "step": 119,
+    "cpu_norm": 0.0333,
+    "mem_norm": 0.031,
+    "workload_type": 0,
+    "cores_demanded": 3.33,
+    "memory_gb": 1.99
+  },
+  {
+    "step": 120,
+    "cpu_norm": 0.0333,
+    "mem_norm": 0.031,
+    "workload_type": 0,
+    "cores_demanded": 3.33,
+    "memory_gb": 1.99
+  },
+  {
+    "step": 121,
+    "cpu_norm": 0.0333,
+    "mem_norm": 0.031,
+    "workload_type": 1,
+    "cores_demanded": 3.33,
+    "memory_gb": 1.99
+  },
+  {
+    "step": 122,
+    "cpu_norm": 0.0333,
+    "mem_norm": 0.031,
+    "workload_type": 0,
+    "cores_demanded": 3.33,
+    "memory_gb": 1.99
+  },
+  {
+    "step": 123,
+    "cpu_norm": 0.0333,
+    "mem_norm": 0.031,
+    "workload_type": 0,
+    "cores_demanded": 3.33,
+    "memory_gb": 1.99
+  },
+  {
+    "step": 124,
+    "cpu_norm": 0.0333,
+    "mem_norm": 0.031,
+    "workload_type": 0,
+    "cores_demanded": 3.33,
+    "memory_gb": 1.99
+  },
+  {
+    "step": 125,
+    "cpu_norm": 0.0333,
+    "mem_norm": 0.031,
+    "workload_type": 0,
+    "cores_demanded": 3.33,
+    "memory_gb": 1.99
+  },
+  {
+    "step": 126,
+    "cpu_norm": 0.0333,
+    "mem_norm": 0.031,
+    "workload_type": 0,
+    "cores_demanded": 3.33,
+    "memory_gb": 1.99
+  },
+  {
+    "step": 127,
+    "cpu_norm": 0.0333,
+    "mem_norm": 0.031,
+    "workload_type": 0,
+    "cores_demanded": 3.33,
+    "memory_gb": 1.99
+  },
+  {
+    "step": 128,
+    "cpu_norm": 0.0333,
+    "mem_norm": 0.031,
+    "workload_type": 0,
+    "cores_demanded": 3.33,
+    "memory_gb": 1.99
+  },
+  {
+    "step": 129,
+    "cpu_norm": 0.0333,
+    "mem_norm": 0.031,
+    "workload_type": 0,
+    "cores_demanded": 3.33,
+    "memory_gb": 1.99
+  },
+  {
+    "step": 130,
+    "cpu_norm": 0.0333,
+    "mem_norm": 0.031,
+    "workload_type": 0,
+    "cores_demanded": 3.33,
+    "memory_gb": 1.99
+  },
+  {
+    "step": 131,
+    "cpu_norm": 0.0333,
+    "mem_norm": 0.031,
+    "workload_type": 1,
+    "cores_demanded": 3.33,
+    "memory_gb": 1.99
+  },
+  {
+    "step": 132,
+    "cpu_norm": 0.0333,
+    "mem_norm": 0.031,
+    "workload_type": 0,
+    "cores_demanded": 3.33,
+    "memory_gb": 1.99
+  },
+  {
+    "step": 133,
+    "cpu_norm": 0.0333,
+    "mem_norm": 0.031,
+    "workload_type": 1,
+    "cores_demanded": 3.33,
+    "memory_gb": 1.99
+  },
+  {
+    "step": 134,
+    "cpu_norm": 0.0333,
+    "mem_norm": 0.031,
+    "workload_type": 0,
+    "cores_demanded": 3.33,
+    "memory_gb": 1.99
+  },
+  {
+    "step": 135,
+    "cpu_norm": 0.0333,
+    "mem_norm": 0.031,
+    "workload_type": 1,
+    "cores_demanded": 3.33,
+    "memory_gb": 1.99
+  },
+  {
+    "step": 136,
+    "cpu_norm": 0.0333,
+    "mem_norm": 0.031,
+    "workload_type": 1,
+    "cores_demanded": 3.33,
+    "memory_gb": 1.99
+  },
+  {
+    "step": 137,
+    "cpu_norm": 0.0333,
+    "mem_norm": 0.031,
+    "workload_type": 1,
+    "cores_demanded": 3.33,
+    "memory_gb": 1.99
+  },
+  {
+    "step": 138,
+    "cpu_norm": 0.0333,
+    "mem_norm": 0.031,
+    "workload_type": 1,
+    "cores_demanded": 3.33,
+    "memory_gb": 1.99
+  },
+  {
+    "step": 139,
+    "cpu_norm": 0.0333,
+    "mem_norm": 0.031,
+    "workload_type": 1,
+    "cores_demanded": 3.33,
+    "memory_gb": 1.99
+  },
+  {
+    "step": 140,
+    "cpu_norm": 0.0333,
+    "mem_norm": 0.031,
+    "workload_type": 1,
+    "cores_demanded": 3.33,
+    "memory_gb": 1.99
+  },
+  {
+    "step": 141,
+    "cpu_norm": 0.0333,
+    "mem_norm": 0.031,
+    "workload_type": 0,
+    "cores_demanded": 3.33,
+    "memory_gb": 1.99
+  },
+  {
+    "step": 142,
+    "cpu_norm": 0.0333,
+    "mem_norm": 0.031,
+    "workload_type": 1,
+    "cores_demanded": 3.33,
+    "memory_gb": 1.99
+  },
+  {
+    "step": 143,
+    "cpu_norm": 0.0333,
+    "mem_norm": 0.031,
+    "workload_type": 1,
+    "cores_demanded": 3.33,
+    "memory_gb": 1.99
+  },
+  {
+    "step": 144,
+    "cpu_norm": 0.0333,
+    "mem_norm": 0.031,
+    "workload_type": 0,
+    "cores_demanded": 3.33,
+    "memory_gb": 1.99
+  },
+  {
+    "step": 145,
+    "cpu_norm": 0.0333,
+    "mem_norm": 0.031,
+    "workload_type": 0,
+    "cores_demanded": 3.33,
+    "memory_gb": 1.99
+  },
+  {
+    "step": 146,
+    "cpu_norm": 0.0333,
+    "mem_norm": 0.031,
+    "workload_type": 0,
+    "cores_demanded": 3.33,
+    "memory_gb": 1.99
+  },
+  {
+    "step": 147,
+    "cpu_norm": 0.0333,
+    "mem_norm": 0.031,
+    "workload_type": 0,
+    "cores_demanded": 3.33,
+    "memory_gb": 1.99
+  },
+  {
+    "step": 148,
+    "cpu_norm": 0.0333,
+    "mem_norm": 0.031,
+    "workload_type": 0,
+    "cores_demanded": 3.33,
+    "memory_gb": 1.99
+  },
+  {
+    "step": 149,
+    "cpu_norm": 0.0333,
+    "mem_norm": 0.031,
+    "workload_type": 1,
+    "cores_demanded": 3.33,
+    "memory_gb": 1.99
+  },
+  {
+    "step": 150,
+    "cpu_norm": 0.0333,
+    "mem_norm": 0.031,
+    "workload_type": 0,
+    "cores_demanded": 3.33,
+    "memory_gb": 1.99
+  },
+  {
+    "step": 151,
+    "cpu_norm": 0.0333,
+    "mem_norm": 0.031,
+    "workload_type": 1,
+    "cores_demanded": 3.33,
+    "memory_gb": 1.99
+  },
+  {
+    "step": 152,
+    "cpu_norm": 0.0333,
+    "mem_norm": 0.031,
+    "workload_type": 0,
+    "cores_demanded": 3.33,
+    "memory_gb": 1.99
+  },
+  {
+    "step": 153,
+    "cpu_norm": 0.0333,
+    "mem_norm": 0.031,
+    "workload_type": 0,
+    "cores_demanded": 3.33,
+    "memory_gb": 1.99
+  },
+  {
+    "step": 154,
+    "cpu_norm": 0.0333,
+    "mem_norm": 0.031,
+    "workload_type": 0,
+    "cores_demanded": 3.33,
+    "memory_gb": 1.99
+  },
+  {
+    "step": 155,
+    "cpu_norm": 0.0333,
+    "mem_norm": 0.031,
+    "workload_type": 0,
+    "cores_demanded": 3.33,
+    "memory_gb": 1.99
+  },
+  {
+    "step": 156,
+    "cpu_norm": 0.0333,
+    "mem_norm": 0.031,
+    "workload_type": 1,
+    "cores_demanded": 3.33,
+    "memory_gb": 1.99
+  },
+  {
+    "step": 157,
+    "cpu_norm": 0.0333,
+    "mem_norm": 0.031,
+    "workload_type": 1,
+    "cores_demanded": 3.33,
+    "memory_gb": 1.99
+  },
+  {
+    "step": 158,
+    "cpu_norm": 0.0333,
+    "mem_norm": 0.031,
+    "workload_type": 0,
+    "cores_demanded": 3.33,
+    "memory_gb": 1.99
+  },
+  {
+    "step": 159,
+    "cpu_norm": 0.0333,
+    "mem_norm": 0.031,
+    "workload_type": 1,
+    "cores_demanded": 3.33,
+    "memory_gb": 1.99
+  },
+  {
+    "step": 160,
+    "cpu_norm": 0.0333,
+    "mem_norm": 0.031,
+    "workload_type": 1,
+    "cores_demanded": 3.33,
+    "memory_gb": 1.99
+  },
+  {
+    "step": 161,
+    "cpu_norm": 0.0333,
+    "mem_norm": 0.031,
+    "workload_type": 1,
+    "cores_demanded": 3.33,
+    "memory_gb": 1.99
+  },
+  {
+    "step": 162,
+    "cpu_norm": 0.0333,
+    "mem_norm": 0.031,
+    "workload_type": 1,
+    "cores_demanded": 3.33,
+    "memory_gb": 1.99
+  },
+  {
+    "step": 163,
+    "cpu_norm": 0.0333,
+    "mem_norm": 0.031,
+    "workload_type": 0,
+    "cores_demanded": 3.33,
+    "memory_gb": 1.99
+  },
+  {
+    "step": 164,
+    "cpu_norm": 0.0333,
+    "mem_norm": 0.031,
+    "workload_type": 0,
+    "cores_demanded": 3.33,
+    "memory_gb": 1.99
+  },
+  {
+    "step": 165,
+    "cpu_norm": 0.0333,
+    "mem_norm": 0.031,
+    "workload_type": 1,
+    "cores_demanded": 3.33,
+    "memory_gb": 1.99
+  },
+  {
+    "step": 166,
+    "cpu_norm": 0.0333,
+    "mem_norm": 0.031,
+    "workload_type": 0,
+    "cores_demanded": 3.33,
+    "memory_gb": 1.99
+  },
+  {
+    "step": 167,
+    "cpu_norm": 0.0333,
+    "mem_norm": 0.031,
+    "workload_type": 0,
+    "cores_demanded": 3.33,
+    "memory_gb": 1.99
+  },
+  {
+    "step": 168,
+    "cpu_norm": 0.0333,
+    "mem_norm": 0.031,
+    "workload_type": 0,
+    "cores_demanded": 3.33,
+    "memory_gb": 1.99
+  },
+  {
+    "step": 169,
+    "cpu_norm": 0.0333,
+    "mem_norm": 0.031,
+    "workload_type": 1,
+    "cores_demanded": 3.33,
+    "memory_gb": 1.99
+  },
+  {
+    "step": 170,
+    "cpu_norm": 0.0333,
+    "mem_norm": 0.031,
+    "workload_type": 0,
+    "cores_demanded": 3.33,
+    "memory_gb": 1.99
+  },
+  {
+    "step": 171,
+    "cpu_norm": 0.0666,
+    "mem_norm": 0.0414,
+    "workload_type": 0,
+    "cores_demanded": 6.66,
+    "memory_gb": 2.65
+  },
+  {
+    "step": 172,
+    "cpu_norm": 0.0666,
+    "mem_norm": 0.0414,
+    "workload_type": 0,
+    "cores_demanded": 6.66,
+    "memory_gb": 2.65
+  },
+  {
+    "step": 173,
+    "cpu_norm": 0.0666,
+    "mem_norm": 0.0414,
+    "workload_type": 0,
+    "cores_demanded": 6.66,
+    "memory_gb": 2.65
+  },
+  {
+    "step": 174,
+    "cpu_norm": 0.0666,
+    "mem_norm": 0.0414,
+    "workload_type": 0,
+    "cores_demanded": 6.66,
+    "memory_gb": 2.65
+  },
+  {
+    "step": 175,
+    "cpu_norm": 0.0666,
+    "mem_norm": 0.0414,
+    "workload_type": 0,
+    "cores_demanded": 6.66,
+    "memory_gb": 2.65
+  },
+  {
+    "step": 176,
+    "cpu_norm": 0.0666,
+    "mem_norm": 0.0414,
+    "workload_type": 0,
+    "cores_demanded": 6.66,
+    "memory_gb": 2.65
+  },
+  {
+    "step": 177,
+    "cpu_norm": 0.0666,
+    "mem_norm": 0.0414,
+    "workload_type": 0,
+    "cores_demanded": 6.66,
+    "memory_gb": 2.65
+  },
+  {
+    "step": 178,
+    "cpu_norm": 0.0666,
+    "mem_norm": 0.0414,
+    "workload_type": 1,
+    "cores_demanded": 6.66,
+    "memory_gb": 2.65
+  },
+  {
+    "step": 179,
+    "cpu_norm": 0.0666,
+    "mem_norm": 0.0414,
+    "workload_type": 1,
+    "cores_demanded": 6.66,
+    "memory_gb": 2.65
+  },
+  {
+    "step": 180,
+    "cpu_norm": 0.0666,
+    "mem_norm": 0.0414,
+    "workload_type": 0,
+    "cores_demanded": 6.66,
+    "memory_gb": 2.65
+  },
+  {
+    "step": 181,
+    "cpu_norm": 0.0666,
+    "mem_norm": 0.0414,
+    "workload_type": 1,
+    "cores_demanded": 6.66,
+    "memory_gb": 2.65
+  },
+  {
+    "step": 182,
+    "cpu_norm": 0.0666,
+    "mem_norm": 0.0414,
+    "workload_type": 1,
+    "cores_demanded": 6.66,
+    "memory_gb": 2.65
+  },
+  {
+    "step": 183,
+    "cpu_norm": 0.0666,
+    "mem_norm": 0.0414,
+    "workload_type": 1,
+    "cores_demanded": 6.66,
+    "memory_gb": 2.65
+  },
+  {
+    "step": 184,
+    "cpu_norm": 0.0666,
+    "mem_norm": 0.0414,
+    "workload_type": 0,
+    "cores_demanded": 6.66,
+    "memory_gb": 2.65
+  },
+  {
+    "step": 185,
+    "cpu_norm": 0.094,
+    "mem_norm": 0.0667,
+    "workload_type": 0,
+    "cores_demanded": 9.4,
+    "memory_gb": 4.27
+  },
+  {
+    "step": 186,
+    "cpu_norm": 0.094,
+    "mem_norm": 0.0667,
+    "workload_type": 0,
+    "cores_demanded": 9.4,
+    "memory_gb": 4.27
+  },
+  {
+    "step": 187,
+    "cpu_norm": 0.094,
+    "mem_norm": 0.0667,
+    "workload_type": 0,
+    "cores_demanded": 9.4,
+    "memory_gb": 4.27
+  },
+  {
+    "step": 188,
+    "cpu_norm": 0.094,
+    "mem_norm": 0.0667,
+    "workload_type": 0,
+    "cores_demanded": 9.4,
+    "memory_gb": 4.27
+  },
+  {
+    "step": 189,
+    "cpu_norm": 0.094,
+    "mem_norm": 0.0667,
+    "workload_type": 0,
+    "cores_demanded": 9.4,
+    "memory_gb": 4.27
+  },
+  {
+    "step": 190,
+    "cpu_norm": 0.094,
+    "mem_norm": 0.0667,
+    "workload_type": 1,
+    "cores_demanded": 9.4,
+    "memory_gb": 4.27
+  },
+  {
+    "step": 191,
+    "cpu_norm": 0.094,
+    "mem_norm": 0.0667,
+    "workload_type": 0,
+    "cores_demanded": 9.4,
+    "memory_gb": 4.27
+  },
+  {
+    "step": 192,
+    "cpu_norm": 0.094,
+    "mem_norm": 0.0667,
+    "workload_type": 0,
+    "cores_demanded": 9.4,
+    "memory_gb": 4.27
+  },
+  {
+    "step": 193,
+    "cpu_norm": 0.094,
+    "mem_norm": 0.0667,
+    "workload_type": 0,
+    "cores_demanded": 9.4,
+    "memory_gb": 4.27
+  },
+  {
+    "step": 194,
+    "cpu_norm": 0.094,
+    "mem_norm": 0.0667,
+    "workload_type": 1,
+    "cores_demanded": 9.4,
+    "memory_gb": 4.27
+  },
+  {
+    "step": 195,
+    "cpu_norm": 0.094,
+    "mem_norm": 0.0667,
+    "workload_type": 0,
+    "cores_demanded": 9.4,
+    "memory_gb": 4.27
+  },
+  {
+    "step": 196,
+    "cpu_norm": 0.094,
+    "mem_norm": 0.0667,
+    "workload_type": 1,
+    "cores_demanded": 9.4,
+    "memory_gb": 4.27
+  },
+  {
+    "step": 197,
+    "cpu_norm": 0.094,
+    "mem_norm": 0.0667,
+    "workload_type": 1,
+    "cores_demanded": 9.4,
+    "memory_gb": 4.27
+  },
+  {
+    "step": 198,
+    "cpu_norm": 0.094,
+    "mem_norm": 0.0667,
+    "workload_type": 1,
+    "cores_demanded": 9.4,
+    "memory_gb": 4.27
+  },
+  {
+    "step": 199,
+    "cpu_norm": 0.094,
+    "mem_norm": 0.0667,
+    "workload_type": 1,
+    "cores_demanded": 9.4,
+    "memory_gb": 4.27
+  },
+  {
+    "step": 200,
+    "cpu_norm": 0.094,
+    "mem_norm": 0.0667,
+    "workload_type": 0,
+    "cores_demanded": 9.4,
+    "memory_gb": 4.27
+  },
+  {
+    "step": 201,
+    "cpu_norm": 0.094,
+    "mem_norm": 0.0667,
+    "workload_type": 0,
+    "cores_demanded": 9.4,
+    "memory_gb": 4.27
+  },
+  {
+    "step": 202,
+    "cpu_norm": 0.094,
+    "mem_norm": 0.0667,
+    "workload_type": 1,
+    "cores_demanded": 9.4,
+    "memory_gb": 4.27
+  },
+  {
+    "step": 203,
+    "cpu_norm": 0.094,
+    "mem_norm": 0.0667,
+    "workload_type": 0,
+    "cores_demanded": 9.4,
+    "memory_gb": 4.27
+  },
+  {
+    "step": 204,
+    "cpu_norm": 0.094,
+    "mem_norm": 0.0667,
+    "workload_type": 0,
+    "cores_demanded": 9.4,
+    "memory_gb": 4.27
+  },
+  {
+    "step": 205,
+    "cpu_norm": 0.094,
+    "mem_norm": 0.0667,
+    "workload_type": 0,
+    "cores_demanded": 9.4,
+    "memory_gb": 4.27
+  },
+  {
+    "step": 206,
+    "cpu_norm": 0.094,
+    "mem_norm": 0.0667,
+    "workload_type": 0,
+    "cores_demanded": 9.4,
+    "memory_gb": 4.27
+  },
+  {
+    "step": 207,
+    "cpu_norm": 0.094,
+    "mem_norm": 0.0667,
+    "workload_type": 1,
+    "cores_demanded": 9.4,
+    "memory_gb": 4.27
+  },
+  {
+    "step": 208,
+    "cpu_norm": 0.094,
+    "mem_norm": 0.0667,
+    "workload_type": 1,
+    "cores_demanded": 9.4,
+    "memory_gb": 4.27
+  },
+  {
+    "step": 209,
+    "cpu_norm": 0.094,
+    "mem_norm": 0.0667,
+    "workload_type": 0,
+    "cores_demanded": 9.4,
+    "memory_gb": 4.27
+  },
+  {
+    "step": 210,
+    "cpu_norm": 0.094,
+    "mem_norm": 0.0667,
+    "workload_type": 1,
+    "cores_demanded": 9.4,
+    "memory_gb": 4.27
+  },
+  {
+    "step": 211,
+    "cpu_norm": 0.094,
+    "mem_norm": 0.0667,
+    "workload_type": 1,
+    "cores_demanded": 9.4,
+    "memory_gb": 4.27
+  },
+  {
+    "step": 212,
+    "cpu_norm": 0.094,
+    "mem_norm": 0.0667,
+    "workload_type": 0,
+    "cores_demanded": 9.4,
+    "memory_gb": 4.27
+  },
+  {
+    "step": 213,
+    "cpu_norm": 0.094,
+    "mem_norm": 0.0667,
+    "workload_type": 0,
+    "cores_demanded": 9.4,
+    "memory_gb": 4.27
+  },
+  {
+    "step": 214,
+    "cpu_norm": 0.094,
+    "mem_norm": 0.0667,
+    "workload_type": 1,
+    "cores_demanded": 9.4,
+    "memory_gb": 4.27
+  },
+  {
+    "step": 215,
+    "cpu_norm": 0.094,
+    "mem_norm": 0.0667,
+    "workload_type": 0,
+    "cores_demanded": 9.4,
+    "memory_gb": 4.27
+  },
+  {
+    "step": 216,
+    "cpu_norm": 0.094,
+    "mem_norm": 0.0667,
+    "workload_type": 0,
+    "cores_demanded": 9.4,
+    "memory_gb": 4.27
+  },
+  {
+    "step": 217,
+    "cpu_norm": 0.094,
+    "mem_norm": 0.0667,
+    "workload_type": 0,
+    "cores_demanded": 9.4,
+    "memory_gb": 4.27
+  },
+  {
+    "step": 218,
+    "cpu_norm": 0.094,
+    "mem_norm": 0.0667,
+    "workload_type": 0,
+    "cores_demanded": 9.4,
+    "memory_gb": 4.27
+  },
+  {
+    "step": 219,
+    "cpu_norm": 0.094,
+    "mem_norm": 0.0667,
+    "workload_type": 1,
+    "cores_demanded": 9.4,
+    "memory_gb": 4.27
+  },
+  {
+    "step": 220,
+    "cpu_norm": 0.094,
+    "mem_norm": 0.0667,
+    "workload_type": 1,
+    "cores_demanded": 9.4,
+    "memory_gb": 4.27
+  },
+  {
+    "step": 221,
+    "cpu_norm": 0.094,
+    "mem_norm": 0.0667,
+    "workload_type": 1,
+    "cores_demanded": 9.4,
+    "memory_gb": 4.27
+  },
+  {
+    "step": 222,
+    "cpu_norm": 0.094,
+    "mem_norm": 0.0667,
+    "workload_type": 1,
+    "cores_demanded": 9.4,
+    "memory_gb": 4.27
+  },
+  {
+    "step": 223,
+    "cpu_norm": 0.094,
+    "mem_norm": 0.0667,
+    "workload_type": 0,
+    "cores_demanded": 9.4,
+    "memory_gb": 4.27
+  },
+  {
+    "step": 224,
+    "cpu_norm": 0.094,
+    "mem_norm": 0.0667,
+    "workload_type": 0,
+    "cores_demanded": 9.4,
+    "memory_gb": 4.27
+  },
+  {
+    "step": 225,
+    "cpu_norm": 0.094,
+    "mem_norm": 0.0667,
+    "workload_type": 0,
+    "cores_demanded": 9.4,
+    "memory_gb": 4.27
+  },
+  {
+    "step": 226,
+    "cpu_norm": 0.094,
+    "mem_norm": 0.0667,
+    "workload_type": 0,
+    "cores_demanded": 9.4,
+    "memory_gb": 4.27
+  },
+  {
+    "step": 227,
+    "cpu_norm": 0.094,
+    "mem_norm": 0.0667,
+    "workload_type": 0,
+    "cores_demanded": 9.4,
+    "memory_gb": 4.27
+  },
+  {
+    "step": 228,
+    "cpu_norm": 0.094,
+    "mem_norm": 0.0667,
+    "workload_type": 1,
+    "cores_demanded": 9.4,
+    "memory_gb": 4.27
+  },
+  {
+    "step": 229,
+    "cpu_norm": 0.0666,
+    "mem_norm": 0.0414,
+    "workload_type": 1,
+    "cores_demanded": 6.66,
+    "memory_gb": 2.65
+  },
+  {
+    "step": 230,
+    "cpu_norm": 0.0666,
+    "mem_norm": 0.0414,
+    "workload_type": 0,
+    "cores_demanded": 6.66,
+    "memory_gb": 2.65
+  },
+  {
+    "step": 231,
+    "cpu_norm": 0.0666,
+    "mem_norm": 0.0414,
+    "workload_type": 0,
+    "cores_demanded": 6.66,
+    "memory_gb": 2.65
+  },
+  {
+    "step": 232,
+    "cpu_norm": 0.0666,
+    "mem_norm": 0.0414,
+    "workload_type": 0,
+    "cores_demanded": 6.66,
+    "memory_gb": 2.65
+  },
+  {
+    "step": 233,
+    "cpu_norm": 0.0666,
+    "mem_norm": 0.0414,
+    "workload_type": 0,
+    "cores_demanded": 6.66,
+    "memory_gb": 2.65
+  },
+  {
+    "step": 234,
+    "cpu_norm": 0.0666,
+    "mem_norm": 0.0414,
+    "workload_type": 1,
+    "cores_demanded": 6.66,
+    "memory_gb": 2.65
+  },
+  {
+    "step": 235,
+    "cpu_norm": 0.0666,
+    "mem_norm": 0.0414,
+    "workload_type": 1,
+    "cores_demanded": 6.66,
+    "memory_gb": 2.65
+  },
+  {
+    "step": 236,
+    "cpu_norm": 0.0666,
+    "mem_norm": 0.0414,
+    "workload_type": 0,
+    "cores_demanded": 6.66,
+    "memory_gb": 2.65
+  },
+  {
+    "step": 237,
+    "cpu_norm": 0.0666,
+    "mem_norm": 0.0414,
+    "workload_type": 0,
+    "cores_demanded": 6.66,
+    "memory_gb": 2.65
+  },
+  {
+    "step": 238,
+    "cpu_norm": 0.0666,
+    "mem_norm": 0.0414,
+    "workload_type": 1,
+    "cores_demanded": 6.66,
+    "memory_gb": 2.65
+  },
+  {
+    "step": 239,
+    "cpu_norm": 0.0666,
+    "mem_norm": 0.0414,
+    "workload_type": 0,
+    "cores_demanded": 6.66,
+    "memory_gb": 2.65
+  },
+  {
+    "step": 240,
+    "cpu_norm": 0.0666,
+    "mem_norm": 0.0414,
+    "workload_type": 1,
+    "cores_demanded": 6.66,
+    "memory_gb": 2.65
+  },
+  {
+    "step": 241,
+    "cpu_norm": 0.0666,
+    "mem_norm": 0.0414,
+    "workload_type": 0,
+    "cores_demanded": 6.66,
+    "memory_gb": 2.65
+  },
+  {
+    "step": 242,
+    "cpu_norm": 0.0666,
+    "mem_norm": 0.0414,
+    "workload_type": 0,
+    "cores_demanded": 6.66,
+    "memory_gb": 2.65
+  },
+  {
+    "step": 243,
+    "cpu_norm": 0.0666,
+    "mem_norm": 0.0414,
+    "workload_type": 1,
+    "cores_demanded": 6.66,
+    "memory_gb": 2.65
+  },
+  {
+    "step": 244,
+    "cpu_norm": 0.0666,
+    "mem_norm": 0.0414,
+    "workload_type": 1,
+    "cores_demanded": 6.66,
+    "memory_gb": 2.65
+  },
+  {
+    "step": 245,
+    "cpu_norm": 0.0666,
+    "mem_norm": 0.0222,
+    "workload_type": 1,
+    "cores_demanded": 6.66,
+    "memory_gb": 1.42
+  },
+  {
+    "step": 246,
+    "cpu_norm": 0.0666,
+    "mem_norm": 0.0222,
+    "workload_type": 1,
+    "cores_demanded": 6.66,
+    "memory_gb": 1.42
+  },
+  {
+    "step": 247,
+    "cpu_norm": 0.0666,
+    "mem_norm": 0.0414,
+    "workload_type": 1,
+    "cores_demanded": 6.66,
+    "memory_gb": 2.65
+  },
+  {
+    "step": 248,
+    "cpu_norm": 0.0666,
+    "mem_norm": 0.0414,
+    "workload_type": 1,
+    "cores_demanded": 6.66,
+    "memory_gb": 2.65
+  },
+  {
+    "step": 249,
+    "cpu_norm": 0.0666,
+    "mem_norm": 0.0414,
+    "workload_type": 1,
+    "cores_demanded": 6.66,
+    "memory_gb": 2.65
+  }
+]
