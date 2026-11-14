@@ -18,6 +18,7 @@ class StreamingIngester:
         self.data_path = data_path
         self.batch_size = batch_size
         self.start_offset = start_offset
+        self.row_index = start_offset
         self.parquet_file = pq.ParquetFile(self.data_path)
         
         # Generator for streaming
@@ -43,12 +44,15 @@ class StreamingIngester:
     def step(self):
         """Simulate one time tick, returning the next arrived pod(s)."""
         try:
-            return next(self._stream)
+            pod = next(self._stream)
+            self.row_index += 1
+            return pod
         except StopIteration:
             return None # End of trace
             
     def reset(self):
         """Reset the stream to the beginning (useful for RL episodes)."""
+        self.row_index = self.start_offset
         self._stream = self._create_stream()
 
 
@@ -68,6 +72,9 @@ class RollingWindowBuffer:
         
         # Use a deque with a maxlen for $O(1)$ fast appends and auto-eviction of old data
         self.buffer = collections.deque(maxlen=window_size)
+        
+    def __len__(self):
+        return len(self.buffer)
         
     def add(self, pod_event):
         """Add a new pod event to the rolling window."""

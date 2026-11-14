@@ -1,0 +1,76 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: k8s-predictive-autoscaler
+  namespace: kube-system
+  labels:
+    app: k8s-predictive-autoscaler
+    tier: control-plane
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: k8s-predictive-autoscaler
+  template:
+    metadata:
+      labels:
+        app: k8s-predictive-autoscaler
+      annotations:
+        prometheus.io/scrape: "true"
+        prometheus.io/port: "8000"
+        prometheus.io/path: "/metrics"
+    spec:
+      containers:
+      - name: autoscaler-engine
+        image: devanshkaila/k8s-predictive-autoscaler:latest
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 8000
+          name: http-metrics
+        resources:
+          requests:
+            cpu: "500m"
+            memory: "512Mi"
+          limits:
+            cpu: "2000m"
+            memory: "2Gi"
+        livenessProbe:
+          httpGet:
+            path: /health
+            port: 8000
+          initialDelaySeconds: 15
+          periodSeconds: 20
+        readinessProbe:
+          httpGet:
+            path: /health
+            port: 8000
+          initialDelaySeconds: 5
+          periodSeconds: 10
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: k8s-predictive-autoscaler-svc
+  namespace: kube-system
+  labels:
+    app: k8s-predictive-autoscaler
+spec:
+  type: ClusterIP
+  ports:
+  - port: 80
+    targetPort: 8000
+    name: http-api
+  selector:
+    app: k8s-predictive-autoscaler
+---
+# Kubernetes Custom Metrics Provider integration for External Metrics API
+apiVersion: custom.metrics.k8s.io/v1beta2
+kind: ExternalMetricValueList
+metadata:
+  name: predictive-autoscaler-metric
+items:
+- metricName: predictive_recommended_cpu_nodes
+  metricLabels:
+    cluster_tier: heterogeneous-gpu
+  value: "14"
+

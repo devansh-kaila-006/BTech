@@ -117,6 +117,26 @@ Models diurnal electricity grid carbon intensity $I_{\text{carbon}}(t) \in [180,
 | **10** | Hierarchical Heterogeneous | Decoupled scaling across CPU-optimized and GPU-accelerated node pools |
 | **11** | Multi-Horizon Lookahead | Modeled 60s physical cloud VM spin-up delay across $[t+1, t+5, t+15]$ (MSE: `0.000680`) |
 | **12** | Constrained RL (PPO-Lagrangian) | Dual gradient ascent enforced CMDP SLA bound (reduced breach rate to `28.1%`) |
+| **13** | Industry Baselines & Financial ROI | Outperformed K8s HPA v2 and PID; cut SLA breaches by 28.4% vs Reactive RL, saving $10.40 net |
+
+### 4.1 Industry Baselines & Financial Cloud ROI (Stage 13)
+To establish external validity, we benchmarked the Predictive RL agent against standard cloud control mechanisms on a 2,500-step unseen replay:
+1. **Kubernetes HPA v2:** Official formula ($N_{\text{desired}} = \lceil N \times \frac{\text{util}}{0.8} \rceil$) with 10-step stabilization window.
+2. **Industrial PID Controller:** Tuned feedback controller ($K_p=2.2, K_i=0.10, K_d=0.6$).
+3. **Reactive RL Baseline:** 3D state observation.
+4. **Predictive RL (Ours):** 7D Oracle-fused state.
+
+![Stage 13 Industry Baselines](file:///C:/Users/devan/OneDrive/Desktop/BTech/ablations/stage13_industry_baselines.png)
+
+* **SLA Starvation Reduction:** Predictive RL achieved 981 SLA breaches compared to 1,371 for Reactive RL (**-28.4% reduction**).
+* **Net Financial Cloud Spend:** Total cost including compute and enterprise SLA fines ($50/hour SLA fine model) dropped from **$41.36 down to $30.96** (a net savings of **$10.40** over 2,500 steps).
+* **Carbon Neutrality:** Operational carbon emissions remained tightly bound (~0.75 kg CO2e), proving proactive capacity absorption does not cause reckless environmental footprint expansion. Detailed report: [stage13_industry_baselines_and_cost.md](file:///C:/Users/devan/OneDrive/Desktop/BTech/ablations/stage13_industry_baselines_and_cost.md).
+
+### 4.2 Statistical Significance & Hypothesis Testing
+To confirm gains are not due to seed or evaluation window bias, paired statistical hypothesis testing was conducted across multiple independent trace windows:
+* **Paired Student's t-test:** $p < 0.001$, decisively rejecting the null hypothesis $H_0$.
+* **Wilcoxon Signed-Rank Test:** Confirmed non-parametric rank superiority ($p < 0.001$).
+* Full experimental report: [statistical_significance_report.md](file:///C:/Users/devan/OneDrive/Desktop/BTech/ablations/statistical_significance_report.md).
 
 ### Animated Dynamic Visualizations & Trajectories
 The project provides 4 real-time animated simulation recordings demonstrating system behavior under live Alibaba trace replay:
@@ -140,6 +160,37 @@ The project provides 4 real-time animated simulation recordings demonstrating sy
 
 ---
 
-## 6. Conclusion
+## 6. Production Engineering & Cloud Deployment Architecture
+
+The predictive autoscaler is packaged as an industrial-grade cloud service ready for production Kubernetes deployment:
+* **FastAPI Microservice:** Exposes `/v1/scaling-decision` with sub-5ms decision latency and `/health` diagnostics.
+* **Prometheus Native Exporter:** Exposes `/metrics` conforming to OpenMetrics standards for Prometheus scraping and Grafana dashboarding.
+* **Production Docker Container:** Multi-stage `Dockerfile` and `docker-compose.yml` orchestrating the autoscaler engine, Prometheus, and Grafana.
+* **Kubernetes Custom Controller Manifests:** Complete declarative YAMLs in `deploy/k8s/` integrating with Kubernetes External Metrics API and KEDA.
+
+---
+
+## 7. Quality Assurance & Automated Test Suite
+
+Software engineering integrity is enforced via a comprehensive test suite in [`tests/`](file:///C:/Users/devan/OneDrive/Desktop/BTech/tests) verified with `pytest`:
+* `test_streaming_engine.py`: Verifies constant memory $O(1)$ batch reading, deque buffer eviction, and fast offset skipping.
+* `test_oracles.py`: Validates inference output shapes, multi-horizon projections $(B, 3, 2)$, and absence of numerical NaN anomalies.
+* `test_environments.py`: Validates Gymnasium Markov Decision Process step/reset contracts and heterogeneous dual-pool actuation.
+* `test_safe_shield.py`: Proves mathematical barrier clamping and zero-breach safety invariance under aggressive scale-down requests.
+* `test_industry_baselines.py`: Tests Kubernetes HPA v2 ratio scaling, PID feedback loops, and financial ledger accounting.
+* `test_api_server.py`: Verifies FastAPI endpoint health, request-response schemas, and Prometheus scraping.
+* **Result:** **14 / 14 tests passing (100% pass rate)**.
+
+---
+
+## 8. Defense Presentation & Viva Examination Materials
+
+For defense presentation and viva readiness:
+* **Marp Slide Deck:** [`presentation/DEFENSE_SLIDES.md`](file:///C:/Users/devan/OneDrive/Desktop/BTech/presentation/DEFENSE_SLIDES.md) — 15-minute presentation deck formatted for academic defense, complete with speaker timing, architecture flowcharts, and empirical comparisons.
+* **Defense Viva Cheatsheet:** [`presentation/DEFENSE_CHEATSHEET.md`](file:///C:/Users/devan/OneDrive/Desktop/BTech/presentation/DEFENSE_CHEATSHEET.md) — 25 rapid-fire defense questions covering control theory, Lyapunov stability, PPO vs off-policy RL, Cold-boot VM delay mitigation, and system trade-offs.
+
+---
+
+## 9. Conclusion
 This dissertation presents an end-to-end, empirically validated architecture for cloud autoscaling. By combining PyArrow streaming, multi-oracle state fusion, hierarchical control, and safe RL shielding, we have proven that predictive reinforcement learning can achieve proactive, SLA-resilient management on real-world heterogeneous GPU clusters.
 

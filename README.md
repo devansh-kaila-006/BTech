@@ -88,6 +88,7 @@ The project was engineered and validated across 10 disciplined ablation stages:
 | **Stage 10** | **Hierarchical Heterogeneous Control** | Decoupled scaling across CPU-only and GPU-accelerated pools | [stage10_hierarchical_gpu_autoscaling.md](file:///C:/Users/devan/OneDrive/Desktop/BTech/ablations/stage10_hierarchical_gpu_autoscaling.md) |
 | **Stage 11** | **Multi-Horizon Lookahead ($t+1, t+5, t+15$)** | Modeled 60s physical cloud VM spin-up delay (Test MSE: `0.000680`) | [stage11_multi_horizon_forecasting.md](file:///C:/Users/devan/OneDrive/Desktop/BTech/ablations/stage11_multi_horizon_forecasting.md) |
 | **Stage 12** | **Constrained RL (PPO-Lagrangian)** | Dual gradient ascent enforced CMDP SLA bound (cut breach rate to `28.1%`) | [stage12_lagrangian_constrained_rl.md](file:///C:/Users/devan/OneDrive/Desktop/BTech/ablations/stage12_lagrangian_constrained_rl.md) |
+| **Stage 13** | **Industry Baselines & Financial ROI** | Outperformed K8s HPA v2 and PID; cut SLA breaches by 28.4% vs Reactive RL, saving $10.40 net | [stage13_industry_baselines_and_cost.md](file:///C:/Users/devan/OneDrive/Desktop/BTech/ablations/stage13_industry_baselines_and_cost.md) |
 
 ---
 
@@ -214,6 +215,32 @@ python scripts/evaluate.py
 ```bash
 python scripts/train_hierarchical_rl.py
 ```
+
+### 6. Run Industry Baselines & Financial ROI Benchmark (Stage 13)
+```bash
+python scripts/evaluate_industry_baselines.py
+```
+
+### 7. Run Automated Quality Assurance Test Suite
+```bash
+python -m pytest tests/ -v
+```
+
+### 8. Production Cloud & Kubernetes Deployment
+```bash
+# Launch FastAPI Inference Server + Prometheus + Grafana
+docker-compose up -d
+
+# Deploy to Kubernetes cluster
+kubectl apply -f deploy/k8s/autoscaler-deployment.yaml
+```
+
+---
+
+## 🎓 Academic Defense & Presentation Resources
+* **15-Minute Defense Slide Deck (Marp):** [`presentation/DEFENSE_SLIDES.md`](file:///C:/Users/devan/OneDrive/Desktop/BTech/presentation/DEFENSE_SLIDES.md)
+* **Comprehensive Viva Cheatsheet (25 Q&As):** [`presentation/DEFENSE_CHEATSHEET.md`](file:///C:/Users/devan/OneDrive/Desktop/BTech/presentation/DEFENSE_CHEATSHEET.md)
+* **Full IEEE-Style Dissertation Report:** [`FINAL_PROJECT_REPORT.md`](file:///C:/Users/devan/OneDrive/Desktop/BTech/FINAL_PROJECT_REPORT.md)
 
 ---
 
