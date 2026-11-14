@@ -86,11 +86,22 @@ Decouples cluster infrastructure into:
 * **GPU Pool ($N_{\text{gpu}}$):** 8-GPU high-density AI accelerators.
 * **Action Vector:** $\mathbf{a}_t = [a_t^{\text{cpu}}, a_t^{\text{gpu}}] \in [-1.0, 1.0]^2$.
 
+### 3.7 Multi-Horizon Lookahead Forecasting (Stage 11)
+To mask real-world physical cloud VM cold-boot latencies (30 to 120 seconds on AWS/GCP), the Time-Series Transformer outputs multi-step lookahead projections across $[t+1, t+5, t+15]$ steps, allowing the policy to initiate VM warm-up 60 seconds before traffic peaks arrive.
+
+### 3.8 Constrained Policy Optimization via PPO-Lagrangian (Stage 12)
+Replaces manual reward weighting with a formal Constrained MDP (CMDP):
+$$\min_{\pi_\theta} \; \mathbb{E}[C_{\text{power}}] \quad \text{subject to} \quad \mathbb{E}[C_{\text{SLA}}] \le \epsilon_{\text{SLA}}$$
+where a dual Lagrange multiplier $\lambda_t$ dynamically adapts via dual gradient ascent to bound SLA breach probability strictly below $5\%$.
+
+### 3.9 Carbon-Aware Cloud Scheduling Extension
+Models diurnal electricity grid carbon intensity $I_{\text{carbon}}(t) \in [180, 650] \text{ gCO}_2/\text{kWh}$, dynamically adjusting scaling aggressiveness to minimize both kilowatt-hours and operational carbon footprint.
+
 ---
 
 ## 4. Comprehensive Experimental Results
 
-### Summary of All 10 Experimental Stages
+### Summary of All 12 Experimental Stages
 
 | Stage | Focus | Key Quantitative Result |
 | :---: | :--- | :--- |
