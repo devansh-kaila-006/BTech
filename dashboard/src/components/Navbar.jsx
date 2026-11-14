@@ -1,7 +1,7 @@
 import React from 'react';
-import { Activity, Server, ShieldCheck, Zap, AlertTriangle, Eye } from 'lucide-react';
+import { Activity, Server, ShieldCheck, Zap, AlertTriangle, Eye, BookOpen } from 'lucide-react';
 
-export default function Navbar({ isLiveBackend, currentStep, onOpenAnimations }) {
+export default function Navbar({ isLiveBackend, currentStep, onOpenAnimations, onOpenVivaGuide }) {
   return (
     <header className="border-b border-gray-800 bg-gray-950/80 backdrop-blur-md sticky top-0 z-40 px-6 py-4">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
@@ -29,11 +29,11 @@ export default function Navbar({ isLiveBackend, currentStep, onOpenAnimations })
         </div>
 
         {/* Status Indicators & Action Buttons */}
-        <div className="flex items-center space-x-4">
+        <div className="flex items-center space-x-3">
           {/* Simulation Step Badge */}
           <div className="flex items-center space-x-2 bg-gray-900/90 border border-gray-800 rounded-lg px-3 py-1.5 text-xs text-gray-300">
             <Activity className="w-4 h-4 text-emerald-400" />
-            <span>Trace Tick:</span>
+            <span>Tick:</span>
             <span className="font-mono font-bold text-emerald-400">{currentStep}</span>
             <span className="text-gray-500">/ 250</span>
           </div>
@@ -45,21 +45,29 @@ export default function Navbar({ isLiveBackend, currentStep, onOpenAnimations })
               <span className={`relative inline-flex rounded-full h-2 w-2 ${isLiveBackend ? 'bg-emerald-500' : 'bg-blue-500'}`}></span>
             </span>
             <span className="text-gray-300">
-              {isLiveBackend ? 'FastAPI Live (:8000)' : 'High-Speed Simulation'}
+              {isLiveBackend ? 'FastAPI (:8000)' : 'High-Speed Replay'}
             </span>
           </div>
+
+          {/* Viva Defense Guide Button */}
+          <button
+            onClick={onOpenVivaGuide}
+            className="flex items-center space-x-1.5 bg-gray-800 hover:bg-gray-700 text-indigo-300 border border-indigo-500/30 text-xs font-semibold px-3 py-1.5 rounded-lg shadow-sm transition-all cursor-pointer"
+          >
+            <BookOpen className="w-3.5 h-3.5" />
+            <span>Viva Guide</span>
+          </button>
 
           {/* View Animations Button */}
           <button
             onClick={onOpenAnimations}
-            className="flex items-center space-x-2 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white text-xs font-semibold px-3.5 py-1.5 rounded-lg shadow-md transition-all cursor-pointer"
+            className="flex items-center space-x-1.5 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white text-xs font-semibold px-3.5 py-1.5 rounded-lg shadow-md transition-all cursor-pointer"
           >
-            <Eye className="w-4 h-4" />
-            <span>Animation Vault (7 GIFs)</span>
+            <Eye className="w-3.5 h-3.5" />
+            <span>Animation Vault (7)</span>
           </button>
         </div>
       </div>
     </header>
   );
 }
-

@@ -1,12 +1,18 @@
-import React, { useState, useEffect, useRef, useMemo } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import Navbar from './components/Navbar';
+import ScenarioPresetsBar from './components/ScenarioPresetsBar';
+import StageNavigator from './components/StageNavigator';
 import ClusterGauges from './components/ClusterGauges';
 import TelemetryChart from './components/TelemetryChart';
+import MultiHorizonForecastCard from './components/MultiHorizonForecastCard';
+import ClusterFleetGrid from './components/ClusterFleetGrid';
 import SimulationControlBar from './components/SimulationControlBar';
 import PolicyComparisonPanel from './components/PolicyComparisonPanel';
 import ChaosMonkeyPanel from './components/ChaosMonkeyPanel';
+import DecisionAuditLog from './components/DecisionAuditLog';
 import FinancialLedger from './components/FinancialLedger';
 import AnimationVaultModal from './components/AnimationVaultModal';
+import VivaWalkthroughModal from './components/VivaWalkthroughModal';
 
 import traceSample from './data/trace_sample.json';
 
@@ -16,7 +22,9 @@ export default function App() {
   const [speed, setSpeed] = useState(2);
   const [activeTier, setActiveTier] = useState('tier4');
   const [activeChaos, setActiveChaos] = useState(null);
+  const [activePreset, setActivePreset] = useState('pareto');
   const [isAnimationModalOpen, setIsAnimationModalOpen] = useState(false);
+  const [isVivaModalOpen, setIsVivaModalOpen] = useState(false);
   const [isLiveBackend, setIsLiveBackend] = useState(false);
 
   const maxSteps = traceSample.length; // 250 steps
@@ -51,11 +59,28 @@ export default function App() {
   // Current pod metadata
   const currentPod = traceSample[currentStep] || traceSample[0];
 
+  // Preset Scenario Handler
+  const handleSelectPreset = (presetId) => {
+    setActivePreset(presetId);
+    if (presetId === 'steady') {
+      setActiveChaos(null);
+      setActiveTier('tier4');
+    } else if (presetId === 'burst') {
+      setActiveChaos('4.5x Flash Storm');
+      setActiveTier('tier4');
+    } else if (presetId === 'crash') {
+      setActiveChaos('50% Node Crash');
+      setActiveTier('tier4');
+    } else if (presetId === 'pareto') {
+      setActiveChaos(null);
+      setActiveTier('tier4');
+    }
+  };
+
   // Live telemetry calculation based on current state & chaos
   const telemetry = useMemo(() => {
     let demand = (currentPod.cores_demanded || 8.5);
 
-    // Chaos multipliers
     let burstFactor = 1.0;
     let crashPenalty = 1.0;
 
@@ -128,15 +153,14 @@ export default function App() {
       const stepNum = startIdx + idx;
       let demand = item.cores_demanded;
 
-      // Simulate reactive baseline util vs predictive util
       let bNodes = 4.5;
       let pNodes = 8.5;
 
       if (activeChaos === '4.5x Flash Storm' && stepNum >= currentStep - 15) {
         demand *= 4.0;
       } else if (activeChaos === '50% Node Crash' && stepNum >= currentStep - 15) {
-        bNodes *= 0.5; // Baseline suffers crash
-        pNodes = Math.max(demand / 6.4, pNodes); // Shield clamps
+        bNodes *= 0.5;
+        pNodes = Math.max(demand / 6.4, pNodes);
       }
 
       const baselineUtil = Math.min(180, (demand / (bNodes * 8.0)) * 100.0);
@@ -153,7 +177,6 @@ export default function App() {
 
   // Ledger summary
   const ledgerData = useMemo(() => {
-    const elapsedHrs = (currentStep * 2.0) / 3600.0;
     const baselineSpend = Math.max(0.5, 41.36 * (currentStep / maxSteps));
     const predictiveSpend = Math.max(0.05, 3.04 * (currentStep / maxSteps));
     const slaFinesAvoided = baselineSpend - predictiveSpend;
@@ -167,44 +190,55 @@ export default function App() {
     };
   }, [currentStep, maxSteps]);
 
-  // Chaos handlers
-  const handleInjectNodeCrash = () => {
-    setActiveChaos('50% Node Crash');
-  };
-
-  const handleInjectFlashCrowd = () => {
-    setActiveChaos('4.5x Flash Storm');
-  };
-
-  const handleResetChaos = () => {
-    setActiveChaos(null);
-  };
-
   return (
-    <div className="min-h-screen bg-[#090d16] text-gray-100 flex flex-col selection:bg-blue-600 selection:text-white pb-12">
+    <div className="min-h-screen bg-[#090d16] text-gray-100 flex flex-col selection:bg-blue-600 selection:text-white pb-12 font-sans">
       {/* Top Navigation */}
       <Navbar
         isLiveBackend={isLiveBackend}
         currentStep={currentStep}
         onOpenAnimations={() => setIsAnimationModalOpen(true)}
+        onOpenVivaGuide={() => setIsVivaModalOpen(true)}
       />
 
       {/* Main Container */}
       <main className="max-w-7xl mx-auto px-4 sm:px-6 w-full mt-6 space-y-6">
-        {/* Row 1: Key Cluster Telemetry Gauges */}
+        {/* Viva Quick Presets Bar */}
+        <ScenarioPresetsBar
+          activePreset={activePreset}
+          onSelectPreset={handleSelectPreset}
+        />
+
+        {/* 15-Stage Experimental Roadmap Navigator */}
+        <StageNavigator />
+
+        {/* Key Cluster Telemetry Gauges */}
         <ClusterGauges
           telemetry={telemetry}
           isShieldActive={telemetry.isShieldIntervening}
         />
 
-        {/* Row 2: Live Time-Series Chart */}
+        {/* Live Time-Series Chart */}
         <TelemetryChart
           chartData={chartData}
           activePolicy={activeTier}
           chaosEvent={activeChaos}
         />
 
-        {/* Row 3: Simulation Control Bar */}
+        {/* Multi-Horizon Lookahead Forecast Wave Card */}
+        <MultiHorizonForecastCard
+          currentPod={currentPod}
+          telemetry={telemetry}
+        />
+
+        {/* Physical Node Fleet Hardware Grid */}
+        <ClusterFleetGrid
+          cpuNodes={telemetry.cpuNodes}
+          gpuNodes={telemetry.gpuNodes}
+          cpuUtil={telemetry.cpuUtil}
+          gpuUtil={telemetry.gpuUtil}
+        />
+
+        {/* Simulation Control Bar */}
         <SimulationControlBar
           isPlaying={isPlaying}
           onTogglePlay={() => setIsPlaying(!isPlaying)}
@@ -221,7 +255,7 @@ export default function App() {
           currentPod={currentPod}
         />
 
-        {/* Row 4: Two-Column Interactive Controls (Policy + Chaos) */}
+        {/* Two-Column Interactive Controls (Policy + Chaos) */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
           <div className="lg:col-span-8">
             <PolicyComparisonPanel
@@ -231,16 +265,32 @@ export default function App() {
           </div>
           <div className="lg:col-span-4">
             <ChaosMonkeyPanel
-              onInjectNodeCrash={handleInjectNodeCrash}
-              onInjectFlashCrowd={handleInjectFlashCrowd}
-              onResetChaos={handleResetChaos}
+              onInjectNodeCrash={() => {
+                setActiveChaos('50% Node Crash');
+                setActivePreset('crash');
+              }}
+              onInjectFlashCrowd={() => {
+                setActiveChaos('4.5x Flash Storm');
+                setActivePreset('burst');
+              }}
+              onResetChaos={() => {
+                setActiveChaos(null);
+                setActivePreset('steady');
+              }}
               activeChaos={activeChaos}
               isShieldIntervening={telemetry.isShieldIntervening}
             />
           </div>
         </div>
 
-        {/* Row 5: Financial Ledger & Carbon Footprint */}
+        {/* Real-Time AI Decision Audit Log */}
+        <DecisionAuditLog
+          currentStep={currentStep}
+          telemetry={telemetry}
+          activeChaos={activeChaos}
+        />
+
+        {/* Financial Ledger & Carbon Footprint */}
         <FinancialLedger ledgerData={ledgerData} />
       </main>
 
@@ -248,6 +298,12 @@ export default function App() {
       <AnimationVaultModal
         isOpen={isAnimationModalOpen}
         onClose={() => setIsAnimationModalOpen(false)}
+      />
+
+      {/* Viva Walkthrough Modal */}
+      <VivaWalkthroughModal
+        isOpen={isVivaModalOpen}
+        onClose={() => setIsVivaModalOpen(false)}
       />
     </div>
   );
