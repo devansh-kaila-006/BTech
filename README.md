@@ -91,10 +91,23 @@ The project was engineered and validated across 10 disciplined ablation stages:
 
 ---
 
-## 🎬 Live Simulation Trajectory (Animated Preview)
-![Predictive Autoscaling Simulation](file:///C:/Users/devan/OneDrive/Desktop/BTech/ablations/animated_scaling_simulation.gif)
+## 🎬 Live Simulation Trajectories & Visual Animations
 
-*The green curve demonstrates proactive provisioning ahead of oncoming workload spikes, maintaining safe capacity and preventing SLA starvation.*
+### 1. Predictive Autoscaling vs Reactive Baseline
+![Predictive Autoscaling Simulation](file:///C:/Users/devan/OneDrive/Desktop/BTech/ablations/animated_scaling_simulation.gif)
+*The green curve demonstrates proactive provisioning ahead of oncoming workload spikes, maintaining safe cluster capacity and preventing SLA latency starvation.*
+
+### 2. Safe RL Action Shield Interception & SLA Protection
+![Safe RL Action Shield](file:///C:/Users/devan/OneDrive/Desktop/BTech/ablations/animated_safe_shield.gif)
+*The Safe RL Shield intercepts aggressive scale-down actions during workload surges, clamping scaling velocity to the safe boundary and reducing catastrophic SLA breaches from 1,158 down to exactly 0.*
+
+### 3. Hierarchical Control for Heterogeneous GPU Clusters
+![Hierarchical GPU Autoscaling](file:///C:/Users/devan/OneDrive/Desktop/BTech/ablations/animated_hierarchical_gpu.gif)
+*Decoupled multi-pool actuation: PPO independently controls continuous scaling velocity for standard CPU-optimized worker nodes (blue) and high-density GPU accelerators (purple).*
+
+### 4. Multi-Horizon Lookahead Transformer Forecast Wave
+![Multi-Horizon Lookahead Forecasting](file:///C:/Users/devan/OneDrive/Desktop/BTech/ablations/animated_multi_horizon.gif)
+*Proactive lookahead across $t+1$ (immediate container burst), $t+5$ (near-term queue depth), and $t+15$ (60-second physical cloud VM spin-up latency) anticipating future traffic surges.*
 
 ---
 

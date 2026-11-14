@@ -61,3 +61,4 @@ class MultiHorizonTransformer(nn.Module):
         # Stack into (batch_size, num_horizons, 2)
         out = torch.stack(horizon_preds, dim=1)
         return out
+

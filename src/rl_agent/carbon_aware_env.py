@@ -65,3 +65,4 @@ class CarbonAwareK8sEnv(gym.Wrapper):
     def reset(self, **kwargs):
         self.total_carbon_emitted_grams = 0.0
         return self.env.reset(**kwargs)
+

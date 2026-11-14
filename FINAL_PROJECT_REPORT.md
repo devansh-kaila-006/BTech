@@ -118,6 +118,13 @@ Models diurnal electricity grid carbon intensity $I_{\text{carbon}}(t) \in [180,
 | **11** | Multi-Horizon Lookahead | Modeled 60s physical cloud VM spin-up delay across $[t+1, t+5, t+15]$ (MSE: `0.000680`) |
 | **12** | Constrained RL (PPO-Lagrangian) | Dual gradient ascent enforced CMDP SLA bound (reduced breach rate to `28.1%`) |
 
+### Animated Dynamic Visualizations & Trajectories
+The project provides 4 real-time animated simulation recordings demonstrating system behavior under live Alibaba trace replay:
+1. **Predictive vs Reactive Trajectory:** [animated_scaling_simulation.gif](file:///C:/Users/devan/OneDrive/Desktop/BTech/ablations/animated_scaling_simulation.gif) — Highlights early scale-up 2.3 seconds before sudden pod arrival spikes.
+2. **Safe Action Clamping Shield:** [animated_safe_shield.gif](file:///C:/Users/devan/OneDrive/Desktop/BTech/ablations/animated_safe_shield.gif) — Demonstrates real-time override of unsafe scale-down actions during cluster saturation.
+3. **Decoupled Heterogeneous Node Pools:** [animated_hierarchical_gpu.gif](file:///C:/Users/devan/OneDrive/Desktop/BTech/ablations/animated_hierarchical_gpu.gif) — Shows independent scaling curves for 16-core CPU nodes vs 8x GPU accelerator instances.
+4. **Multi-Horizon Lookahead Waves:** [animated_multi_horizon.gif](file:///C:/Users/devan/OneDrive/Desktop/BTech/ablations/animated_multi_horizon.gif) — Visualizes multi-step forecast envelopes predicting traffic 60 seconds into the future.
+
 ---
 
 ## 5. Defense Questions & Scientific Answers
