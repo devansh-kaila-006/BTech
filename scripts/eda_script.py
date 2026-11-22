@@ -97,10 +97,11 @@ class AlibabaTraceEDA:
         # 2. Hexbin Density
         df['log_cpu'] = np.log10(df['cpu_milli'].replace(0, 1))
         df['log_mem'] = np.log10(df['memory_mib'].replace(0, 1))
-        g = sns.jointplot(data=df, x='log_cpu', y='log_mem', kind="hex", color="#E6550D", gridsize=40, bins='log')
-        g.fig.suptitle("Pod CPU vs Memory Hexbin Density (Log10 Scale)", y=1.02)
-        g.set_axis_labels("Log10(CPU Milli-cores)", "Log10(Memory MiB)")
-        plt.savefig(os.path.join(self.output_dir, "03_pod_cpu_mem_hexbin.png"))
+        g = sns.jointplot(data=df, x='log_cpu', y='log_mem', kind="hex", color="#E6550D", gridsize=35, bins='log', height=8, marginal_kws=dict(color='#E6550D', bins=40))
+        g.set_axis_labels("Log10(CPU Milli-cores)", "Log10(Memory MiB)", fontsize=14, fontweight='bold', labelpad=10)
+        g.fig.subplots_adjust(top=0.92, right=0.92, bottom=0.10, left=0.10)
+        g.fig.suptitle("Pod CPU vs Memory Hexbin Density (Log10 Scale)", fontsize=16, fontweight='bold', y=0.98)
+        plt.savefig(os.path.join(self.output_dir, "03_pod_cpu_mem_hexbin.png"), dpi=300, bbox_inches='tight')
         plt.close('all')
         
         # 3. GPU Spec Distribution
